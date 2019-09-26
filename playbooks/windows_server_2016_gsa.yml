@@ -13,7 +13,7 @@
      - 1.1.1
      - level-1
 
-  - name: "Ensure 'Maximum password age' is set to '60 or fewer days, but not 0' [GSA-90]"
+  - name: "Ensure 'Maximum password age' is set to '60 or fewer days, but not 0'"
     win_security_policy:
       section: System Access
       key: MaximumPasswordAge
@@ -24,7 +24,7 @@
      - 1.1.2
      - level-1
 
-  - name: "Ensure 'Minimum password age' is set to '1 or more day(s)' [GSA-0]"
+  - name: "Ensure 'Minimum password age' is set to '1 or more day(s)'"
     win_security_policy:
       section: System Access
       key: MinimumPasswordAge
@@ -35,7 +35,7 @@
      - 1.1.3
      - level-1
 
-  - name: "Ensure 'Minimum password length' is set to '14 or more character(s)' [GSA-16]"
+  - name: "Ensure 'Minimum password length' is set to '14 or more character(s)'"
     win_security_policy:
       section: System Access
       key: MinimumPasswordLength
@@ -46,7 +46,7 @@
      - 1.1.4
      - level-1
 
-  - name: "Ensure 'Password must meet complexity requirements' is set to 'Enabled' [GSA-Disabled]"
+  - name: "Ensure 'Password must meet complexity requirements' is set to 'Enabled'"
     win_security_policy:
       section: System Access
       key: PasswordComplexity
@@ -69,7 +69,7 @@
      - 1.1.6
      - level-1
 
-  - name: "Ensure 'Account lockout threshold' is set to '10 or fewer invalid logon attempt(s), but not 0' [GSA-5]"
+  - name: "Ensure 'Account lockout threshold' is set to '10 or fewer invalid logon attempt(s), but not 0'"
     win_security_policy:
       section: System Access
       key: LockoutBadCount
@@ -79,7 +79,7 @@
      - 1.2.2
      - level-1
 
-  - name: "Ensure 'Account lockout duration' is set to '15 or more minute(s)' [GSA-30]"
+  - name: "Ensure 'Account lockout duration' is set to '15 or more minute(s)'"
     win_security_policy:
       section: System Access
       key: LockoutDuration
@@ -89,7 +89,7 @@
      - 1.2.1
      - level-1
 
-  - name: "Ensure 'Reset account lockout counter after' is set to '15 or more minute(s)' [GSA-30]"
+  - name: "Ensure 'Reset account lockout counter after' is set to '15 or more minute(s)'"
     win_security_policy:
       section: System Access
       key: ResetLockoutCount
@@ -270,7 +270,7 @@
      - 2.2.16
      - level-1
 
-  - name: "Configure 'Deny access to this computer from the network' [GSA-Guests, Local account]"
+  - name: "Configure 'Deny access to this computer from the network'"
     win_user_right:
       name: SeDenyNetworkLogonRight
       users:
