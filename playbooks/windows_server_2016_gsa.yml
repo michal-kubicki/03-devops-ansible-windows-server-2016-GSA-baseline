@@ -10,6 +10,8 @@
     tags:
      - CCE-37166-6
      - passwords
+     - 1.1.1
+     - level-1
 
   - name: "Ensure 'Maximum password age' is set to '60 or fewer days, but not 0' [GSA-90]"
     win_security_policy:
@@ -19,6 +21,8 @@
     tags:
      - CCE-37167-4
      - passwords
+     - 1.1.2
+     - level-1
 
   - name: "Ensure 'Minimum password age' is set to '1 or more day(s)' [GSA-0]"
     win_security_policy:
@@ -28,6 +32,8 @@
     tags:
      - CCE-37073-4
      - passwords
+     - 1.1.3
+     - level-1
 
   - name: "Ensure 'Minimum password length' is set to '14 or more character(s)' [GSA-16]"
     win_security_policy:
@@ -37,6 +43,8 @@
     tags:
      - CCE-36534-6
      - passwords
+     - 1.1.4
+     - level-1
 
   - name: "Ensure 'Password must meet complexity requirements' is set to 'Enabled' [GSA-Disabled]"
     win_security_policy:
@@ -46,6 +54,8 @@
     tags:
      - CCE-37063-5
      - passwords
+     - level-1
+     - 1.1.5
 
   - name: "Ensure 'Store passwords using reversible encryption' is set to 'Disabled'"
     win_security_policy:
@@ -56,7 +66,9 @@
     tags:
      - CCE-36286-3
      - passwords
-     
+     - 1.1.6
+     - level-1
+
   - name: "Ensure 'Account lockout threshold' is set to '10 or fewer invalid logon attempt(s), but not 0' [GSA-5]"
     win_security_policy:
       section: System Access
@@ -64,6 +76,8 @@
       value: 5
     tags:
      - CCE-36008-1
+     - 1.2.2
+     - level-1
 
   - name: "Ensure 'Account lockout duration' is set to '15 or more minute(s)' [GSA-30]"
     win_security_policy:
@@ -72,6 +86,8 @@
       value: 1800
     tags:
      - CCE-37034-6
+     - 1.2.1
+     - level-1
 
   - name: "Ensure 'Reset account lockout counter after' is set to '15 or more minute(s)' [GSA-30]"
     win_security_policy:
@@ -80,6 +96,8 @@
       value: 1800
     tags:
      - CCE-36883-7
+     - 1.2.3
+     - level1
 
   - name: "Ensure 'Access Credential Manager as a trusted caller' is set to 'No One'"
     win_user_right:
@@ -88,6 +106,8 @@
       action: set
     tags:
      - CCE-37056-9
+     - 2.2.1
+     - level-1
 
   - name: "Configure 'Access this computer from the network'"
     win_user_right:
@@ -98,6 +118,8 @@
       action: set
     tags:
      - CCE-35818-4
+     - 2.2.2
+     - level-1
 
   - name: "Ensure 'Act as part of the operating system' is set to 'No One'"
     win_user_right:
@@ -106,6 +128,8 @@
       action: set
     tags:
      - CCE-36876-1
+     - 2.2.3
+     - level-1
 
   - name: "Ensure 'Adjust memory quotas for a process' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE'"
     win_user_right:
@@ -117,6 +141,8 @@
       action: set
     tags:
      - CCE-37071-8
+     - 2.2.5
+     - level-1
 
   - name: "Configure 'Allow log on locally'"
     win_user_right:
@@ -126,6 +152,8 @@
       action: set
     tags:
      - CCE-37659-0
+     - 2.2.6
+     - level-1
 
   - name: "Configure 'Allow log on through Remote Desktop Services'"
     win_user_right:
@@ -136,6 +164,8 @@
       action: set
     tags:
      - CCE-37072-6
+     - 2.2.7
+     - level-1
      - remote_desktop
 
   - name: "Ensure 'Back up files and directories' is set to 'Administrators'"
@@ -146,6 +176,8 @@
       action: set
     tags:
      - CCE-35912-5
+     - 2.2.8
+     - level-1
 
   - name: "Ensure 'Change the system time' is set to 'Administrators, LOCAL SERVICE'"
     win_user_right:
@@ -156,6 +188,8 @@
       action: set
     tags:
      - CCE-37452-0
+     - 2.2.9
+     - level-1
 
   - name: "Ensure 'Change the time zone' is set to 'Administrators, LOCAL SERVICE'"
     win_user_right:
@@ -166,6 +200,8 @@
       action: set
     tags:
      - CCE-37700-2
+     - 2.2.10
+     - level-1
 
   - name: "Ensure 'Create a pagefile' is set to 'Administrators'"
     win_user_right:
@@ -175,6 +211,8 @@
       action: set
     tags:
      - CCE-35821-8
+     - 2.2.11
+     - level-1
 
   - name: "Ensure 'Create a token object' is set to 'No One'"
     win_user_right:
@@ -183,6 +221,8 @@
       action: set
     tags:
      - CCE-36861-3
+     - 2.2.12
+     - level-1
 
   - name: "Ensure 'Create global objects' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE'"
     win_user_right:
@@ -195,6 +235,8 @@
       action: set
     tags:
      - CCE-37453-8
+     - 2.2.13
+     - level-1
 
   - name: "Ensure 'Create permanent shared objects' is set to 'No One'"
     win_user_right:
@@ -203,6 +245,8 @@
       action: set
     tags:
      - CCE-36532-0
+     - 2.2.14
+     - level-1
 
   - name: "Configure 'Create symbolic links'"
     win_user_right:
@@ -212,6 +256,8 @@
       action: set
     tags:
      - CCE-35823-4
+     - 2.2.15
+     - level-1
 
   - name: "Ensure 'Debug programs' is set to 'Administrators'"
     win_user_right:
@@ -221,6 +267,8 @@
       action: set
     tags:
      - CCE-37075-9
+     - 2.2.16
+     - level-1
 
   - name: "Configure 'Deny access to this computer from the network' [GSA-Guests, Local account]"
     win_user_right:
@@ -230,6 +278,8 @@
       action: set
     tags:
      - CCE-37954-5
+     - 2.2.17
+     - level-1
 
   - name: "Ensure 'Deny log on as a batch job' to include 'Guests'"
     win_user_right:
@@ -239,6 +289,8 @@
       action: set
     tags:
      - CCE-36923-1
+     - 2.2.18
+     - level-1
 
   - name: "Ensure 'Deny log on as a service' to include 'Guests'"
     win_user_right:
@@ -248,6 +300,8 @@
       action: set
     tags:
      - CCE-36877-9
+     - 2.2.19
+     - level-1
 
   - name: "Ensure 'Deny log on locally' to include 'Guests'"
     win_user_right:
@@ -257,6 +311,8 @@
       action: set
     tags:
      - CCE-37146-8
+     - 2.2.20
+     - level-1
 
   - name: "Ensure 'Deny log on through Remote Desktop Services' to include 'Guests, Local account'"
     win_user_right:
@@ -266,6 +322,8 @@
       action: set
     tags:
      - CCE-36867-0
+     - 2.2.21
+     - level-1
      - remote_desktop
 
   - name: "Configure 'Enable computer and user accounts to be trusted for delegation'"
@@ -275,6 +333,8 @@
       action: set
     tags:
      - CCE-36860-5
+     - 2.2.22
+     - level-1
 
   - name: "Ensure 'Force shutdown from a remote system' is set to 'Administrators'"
     win_user_right:
@@ -284,6 +344,8 @@
       action: set
     tags:
      - CCE-37877-8
+     - 2.2.23
+     - level-1
 
   - name: "Ensure 'Generate security audits' is set to 'LOCAL SERVICE, NETWORK SERVICE'"
     win_user_right:
@@ -294,6 +356,8 @@
       action: set
     tags:
      - CCE-37639-2
+     - 2.2.24
+     - level-1
 
   - name: "Configure 'Impersonate a client after authentication'"
     win_user_right:
@@ -307,6 +371,8 @@
       action: set
     tags:
      - CCE-37106-2
+     - 2.2.25
+     - level-1
 
   - name: "Ensure 'Increase scheduling priority' is set to 'Administrators'"
     win_user_right:
@@ -316,6 +382,8 @@
       action: set
     tags:
      - CCE-38326-5
+     - 2.2.26
+     - level-1
 
   - name: "Ensure 'Load and unload device drivers' is set to 'Administrators'"
     win_user_right:
@@ -325,6 +393,8 @@
       action: set
     tags:
      - CCE-36318-4
+     - 2.2.27
+     - level-1
      - drivers
 
   - name: "Ensure 'Lock pages in memory' is set to 'No One'"
@@ -334,6 +404,8 @@
       action: set
     tags:
      - CCE-36495-0
+     - 2.2.28
+     - level-1
 
   - name: "Configure 'Manage auditing and security log'"
     win_user_right:
@@ -343,6 +415,8 @@
       action: set
     tags:
      - CCE-35906-7
+     - 2.2.30
+     - level-1
 
   - name: "Ensure 'Modify an object label' is set to 'No One'"
     win_user_right:
@@ -351,6 +425,8 @@
       action: set
     tags:
      - CCE-36054-5
+     - 2.2.31
+     - level-1
 
   - name: "Ensure 'Modify firmware environment values' is set to 'Administrators'"
     win_user_right:
@@ -360,6 +436,8 @@
       action: set
     tags:
      - CCE-38113-7
+     - 2.2.32
+     - level-1
 
   - name: "Ensure 'Perform volume maintenance tasks' is set to 'Administrators'"
     win_user_right:
@@ -369,6 +447,8 @@
       action: set
     tags:
      - CCE-36143-6
+     - 2.2.33
+     - level-1
 
   - name: "Ensure 'Profile single process' is set to 'Administrators'"
     win_user_right:
@@ -378,6 +458,8 @@
       action: set
     tags:
      - CCE-37131-0
+     - 2.2.34
+     - level-1
 
   - name: "Ensure 'Profile system performance' is set to 'Administrators, NT SERVICE\\WdiServiceHost'"
     win_user_right:
@@ -388,6 +470,8 @@
       action: set
     tags:
      - CCE-36052-9
+     - 2.2.35
+     - level-1
 
   - name: "Ensure 'Replace a process level token' is set to 'LOCAL SERVICE, NETWORK SERVICE'"
     win_user_right:
@@ -398,6 +482,8 @@
       action: set
     tags:
      - CCE-37430-6
+     - 2.2.36
+     - level-1
 
   - name: "Ensure 'Restore files and directories' is set to 'Administrators'"
     win_user_right:
@@ -407,6 +493,8 @@
       action: set
     tags:
      - CCE-37613-7
+     - 2.2.37
+     - level-1
 
   - name: "Ensure 'Shut down the system' is set to 'Administrators'"
     win_user_right:
@@ -416,6 +504,8 @@
       action: set
     tags:
      - CCE-38328-1
+     - 2.2.38
+     - level-1
 
   - name: "Ensure 'Take ownership of files or other objects' is set to 'Administrators'"
     win_user_right:
@@ -425,8 +515,10 @@
       action: set
     tags:
      - CCE-38325-7
+     - 2.2.40
+     - level-1
 
-  - name: "Ensure 'Accounts - Block Microsoft accounts' is set to 'Users can't add or log on with Microsoft accounts'"
+  - name: "Ensure 'Accounts: Block Microsoft accounts' is set to 'Users can't add or log on with Microsoft accounts'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: "NoConnectedUser"
@@ -434,16 +526,20 @@
       type: dword
     tags:
      - CCE-36147-7
+     - 2.3.1.2
+     - level-1
 
-  - name: "Ensure 'Accounts - Guest account status' is set to 'Disabled'"
+  - name: "Ensure 'Accounts: Guest account status' is set to 'Disabled'"
     win_security_policy:
       section: System Access
       key: EnableGuestAccount
       value: 0
     tags:
      - CCE-37432-2
+     - 2.3.1.3
+     - level-1
 
-  - name: "Ensure 'Accounts - Limit local account use of blank passwords to console logon only' is set to 'Enabled'"
+  - name: "Ensure 'Accounts: Limit local account use of blank passwords to console logon only' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Lsa
       name: "LimitBlankPasswordUse"
@@ -451,17 +547,21 @@
       type: dword
     tags:
      - CCE-37615-2
+     - 2.3.1.4
+     - level-1
      - passwords
 
-  - name: "Configure 'Accounts - Rename guest account'"
+  - name: "Configure 'Accounts: Rename guest account'"
     win_security_policy:
       section: System Access
       key: NewGuestName
       value: BillGates
     tags:
      - CCE-38027-9
+     - 2.3.1.6
+     - level-1
 
-  - name: "Ensure 'Audit - Force audit policy subcategory settings to override audit policy category settings' is set to 'Enabled'"
+  - name: "Ensure 'Audit: Force audit policy subcategory settings (Windows Vista or later) to override audit policy category settings' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Lsa
       name: "SCENoApplyLegacyAuditPolicy"
@@ -469,8 +569,10 @@
       type: dword
     tags:
      - CCE-37850-5
+     - 2.3.2.1
+     - level-1
 
-  - name: "Ensure 'Audit - Shut down system immediately if unable to log security audits' is set to 'Disabled'"
+  - name: "Ensure 'Audit: Shut down system immediately if unable to log security audits' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Lsa
       name: "CrashOnAuditFail"
@@ -478,8 +580,10 @@
       type: dword
     tags:
      - CCE-35907-5
+     - 2.3.2.2
+     - level-1
 
-  - name: "Ensure 'Devices - Allowed to format and eject removable media' is set to 'Administrators'"
+  - name: "Ensure 'Devices: Allowed to format and eject removable media' is set to 'Administrators'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows Nt\Currentversion\Winlogon
       name: "AllocateDASD"
@@ -487,8 +591,10 @@
       type: string
     tags:
      - CCE-37701-0
+     - 2.3.4.1
+     - level-1
 
-  - name: "Ensure 'Devices - Prevent users from installing printer drivers' is set to 'Enabled'"
+  - name: "Ensure 'Devices: Prevent users from installing printer drivers' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Print\Providers\Lanman Print Services\Servers
       name: "AddPrinterDrivers"
@@ -496,9 +602,11 @@
       type: dword
     tags:
      - CCE-37942-0
+     - 2.3.4.2
+     - level-1
      - drivers
 
-  - name: "Ensure 'Domain member - Digitally encrypt or sign secure channel data (always)' is set to 'Enabled'"
+  - name: "Ensure 'Domain member: Digitally encrypt or sign secure channel data (always)' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Netlogon\Parameters
       name: "RequireSignOrSeal"
@@ -506,8 +614,10 @@
       type: dword
     tags:
      - CCE-36142-8
+     - 2.3.6.1
+     - level-1
 
-  - name: "Ensure 'Domain member - Digitally encrypt secure channel data (when possible)' is set to 'Enabled'"
+  - name: "Ensure 'Domain member: Digitally encrypt secure channel data (when possible)' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Netlogon\Parameters
       name: "sealsecurechannel"
@@ -515,8 +625,10 @@
       type: dword
     tags:
      - CCE-37130-2
+     - 2.3.6.2
+     - level-1
 
-  - name: "Ensure 'Domain member - Digitally sign secure channel data (when possible)' is set to 'Enabled'"
+  - name: "Ensure 'Domain member: Digitally sign secure channel data (when possible)' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Netlogon\Parameters
       name: "signsecurechannel"
@@ -524,8 +636,10 @@
       type: dword
     tags:
      - CCE-37222-7
+     - 2.3.6.3
+     - level-1
 
-  - name: "Ensure 'Domain member - Disable machine account password changes' is set to 'Disabled'"
+  - name: "Ensure 'Domain member: Disable machine account password changes' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Netlogon\Parameters
       name: "disablepasswordchange"
@@ -533,9 +647,11 @@
       type: dword
     tags:
      - CCE-37508-9
+     - 2.3.6.4
+     - level-1
      - passwords
 
-  - name: "Ensure 'Domain member - Maximum machine account password age' is set to '30 or fewer days, but not 0'"
+  - name: "Ensure 'Domain member: Maximum machine account password age' is set to '30 or fewer days, but not 0'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Netlogon\Parameters
       name: "MaximumPasswordAge"
@@ -543,9 +659,11 @@
       type: dword
     tags:
      - CCE-37431-4
+     - 2.3.6.5
+     - level-1
      - passwords
 
-  - name: "Ensure 'Domain member - Require strong (Windows 2000 or later) session key' is set to 'Enabled'"
+  - name: "Ensure 'Domain member: Require strong (Windows 2000 or later) session key' is set to 'Enabled' "
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Netlogon\Parameters
       name: "RequireStrongKey"
@@ -553,8 +671,10 @@
       type: dword
     tags:
      - CCE-37614-5
+     - 2.3.6.6
+     - level-1
 
-  - name: "Ensure 'Interactive logon - Do not display last user name' is set to 'Enabled'"
+  - name: "Ensure 'Interactive logon: Do not display last user name' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: "DontDisplayLastUserName"
@@ -562,8 +682,10 @@
       type: dword
     tags:
      - CCE-36056-0
+     - 2.3.7.1
+     - level-1
 
-  - name: "Ensure 'Interactive logon - Do not require CTRL+ALT+DEL' is set to 'Disabled'"
+  - name: "Ensure 'Interactive logon: Do not require CTRL+ALT+DEL' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: "DisableCAD"
@@ -571,8 +693,10 @@
       type: dword
     tags:
      - CCE-37637-6
+     - 2.3.7.2
+     - level-1
 
-  - name: "Ensure 'Interactive logon - Machine inactivity limit' is set to '900 or fewer second(s), but not 0'"
+  - name: "Ensure 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: "InactivityTimeoutSecs"
@@ -580,8 +704,10 @@
       type: dword
     tags:
      - CCE-38235-8
+     - 2.3.7.3
+     - level-1
 
-  - name: "Configure 'Interactive logon - Message text for users attempting to log on'"
+  - name: "Configure 'Interactive logon: Message text for users attempting to log on'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: "LegalNoticeText"
@@ -589,8 +715,10 @@
       type: string
     tags:
      - CCE-37226-8
+     - 2.3.7.4
+     - level-1
 
-  - name: "Configure 'Interactive logon - Message title for users attempting to log on'"
+  - name: "Configure 'Interactive logon: Message title for users attempting to log on'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: "LegalNoticeCaption"
@@ -598,8 +726,10 @@
       type: string
     tags:
      - CCE-37512-1
+     - 2.3.7.5
+     - level-1
 
-  - name: "Ensure 'Interactive logon - Prompt user to change password before expiration' is set to 'between 5 and 14 days'"
+  - name: "Ensure 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows Nt\Currentversion\Winlogon
       name: "PasswordExpiryWarning"
@@ -607,9 +737,11 @@
       type: dword
     tags:
      - CCE-37622-8
+     - 2.3.7.7
+     - level-1
      - passwords
 
-  - name: "Ensure 'Interactive logon - Require Domain Controller Authentication to unlock workstation' is set to 'Enabled'"
+  - name: "Ensure 'Interactive logon: Require Domain Controller Authentication to unlock workstation' is set to 'Enabled' (MS only)"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows Nt\Currentversion\Winlogon
       name: "ForceUnlockLogon"
@@ -617,8 +749,10 @@
       type: dword
     tags:
      - CCE-38240-8
+     - 2.3.7.8
+     - level-1
 
-  - name: "Ensure 'Interactive logon - Smart card removal behavior' is set to 'Lock Workstation' or higher"
+  - name: "Ensure 'Interactive logon: Smart card removal behavior' is set to 'Lock Workstation' or higher"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows Nt\Currentversion\Winlogon
       name: "scremoveoption"
@@ -626,8 +760,10 @@
       type: string
     tags:
      - CCE-38333-1
+     - 2.3.7.9
+     - level-1
 
-  - name: "Ensure 'Microsoft network client - Digitally sign communications (always)' is set to 'Enabled'"
+  - name: "Ensure 'Microsoft network client: Digitally sign communications (always)' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Lanmanworkstation\Parameters
       name: "RequireSecuritySignature"
@@ -635,8 +771,10 @@
       type: dword
     tags:
      - CCE-36325-9
+     - 2.3.8.1
+     - level-1
 
-  - name: "Ensure 'Microsoft network client - Digitally sign communications (if server agrees)' is set to 'Enabled'"
+  - name: "Ensure 'Microsoft network client: Digitally sign communications (if server agrees)' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Lanmanworkstation\Parameters
       name: "EnableSecuritySignature"
@@ -644,8 +782,10 @@
       type: dword
     tags:
      - CCE-36269-9
+     - 2.3.8.2
+     - level-1
 
-  - name: "Ensure 'Microsoft network client - Send unencrypted password to third-party SMB servers' is set to 'Disabled'"
+  - name: "Ensure 'Microsoft network client: Send unencrypted password to third-party SMB servers' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Lanmanworkstation\Parameters
       name: "EnablePlainTextPassword"
@@ -653,9 +793,11 @@
       type: dword
     tags:
      - CCE-37863-8
+     - 2.3.8.3
+     - level-1
      - passwords
 
-  - name: "Ensure 'Microsoft network server - Amount of idle time required before suspending session' is set to '15 or fewer, but not 0'"
+  - name: " Ensure 'Microsoft network server: Amount of idle time required before suspending session' is set to '15 or fewer minute(s), but not 0'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Lanmanserver\Parameters
       name: "autodisconnect"
@@ -663,8 +805,10 @@
       type: dword
     tags:
      - CCE-38046-9
+     - 2.3.9.1
+     - level-1
 
-  - name: "Ensure 'Microsoft network server - Digitally sign communications (always)' is set to 'Enabled'"
+  - name: "Ensure 'Microsoft network server: Digitally sign communications (always)' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Lanmanserver\Parameters
       name: "requiresecuritysignature"
@@ -672,8 +816,10 @@
       type: dword
     tags:
      - CCE-37864-6
+     - 2.3.9.2
+     - level-1
 
-  - name: "Ensure 'Microsoft network server - Digitally sign communications (if client agrees)' is set to 'Enabled'"
+  - name: "Ensure 'Microsoft network server: Digitally sign communications (if client agrees)' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Lanmanserver\Parameters
       name: "enablesecuritysignature"
@@ -681,8 +827,10 @@
       type: dword
     tags:
      - CCE-35988-5
+     - 2.3.9.3
+     - level-1
 
-  - name: "Ensure 'Microsoft network server - Disconnect clients when logon hours expire' is set to 'Enabled'"
+  - name: "Ensure 'Microsoft network server: Disconnect clients when logon hours expire' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Lanmanserver\Parameters
       name: "enableforcedlogoff"
@@ -690,8 +838,10 @@
       type: dword
     tags:
      - CCE-37972-7
+     - 2.3.9.4
+     - level-1
 
-  - name: "Ensure 'Microsoft network server - Server SPN target name validation level' is set to 'Accept if provided by client' or higher"
+  - name: "Ensure 'Microsoft network server: Server SPN target name validation level' is set to 'Accept if provided by client' or higher"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Lanmanserver\Parameters
       name: "SMBServerNameHardeningLevel"
@@ -699,16 +849,20 @@
       type: dword
     tags:
      - CCE-36170-9
+     - 2.3.9.5
+     - level-1
 
-  - name: "Ensure 'Network access - Allow anonymous SID/Name translation' is set to 'Disabled'"
+  - name: "Ensure 'Network access: Allow anonymous SID/Name translation' is set to 'Disabled'"
     win_security_policy:
       section: System Access
       key: LSAAnonymousNameLookup
       value: 0
     tags:
      - CCE-36065-1
+     - 2.3.10.1
+     - level-1
 
-  - name: "Ensure 'Network access - Do not allow anonymous enumeration of SAM accounts' is set to 'Enabled'"
+  - name: "Ensure 'Network access: Do not allow anonymous enumeration of SAM accounts' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Lsa
       name: "RestrictAnonymousSAM"
@@ -716,8 +870,10 @@
       type: dword
     tags:
      - CCE-36316-8
+     - 2.3.10.2
+     - level-1
 
-  - name: "Ensure 'Network access - Do not allow anonymous enumeration of SAM accounts and shares' is set to 'Enabled'"
+  - name: "Ensure 'Network access: Do not allow anonymous enumeration of SAM accounts and shares' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Lsa
       name: "RestrictAnonymous"
@@ -725,8 +881,10 @@
       type: dword
     tags:
      - CCE-36077-6
+     - 2.3.10.3
+     - level-1
 
-  - name: "Ensure 'Network access - Let Everyone permissions apply to anonymous users' is set to 'Disabled'"
+  - name: "Ensure 'Network access: Let Everyone permissions apply to anonymous users' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Lsa
       name: "EveryoneIncludesAnonymous"
@@ -734,8 +892,10 @@
       type: dword
     tags:
      - CCE-36148-5
+     - 2.3.10.5
+     - level-1
 
-  - name: "Configure 'Network access - Named Pipes that can be accessed anonymously'"
+  - name: "Configure 'Network access: Named Pipes that can be accessed anonymously'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Lanmanserver\Parameters
       name: "NullSessionPipes"
@@ -743,8 +903,10 @@
       type: multistring
     tags:
      - CCE-38258-0
+     - 2.3.10.6
+     - level-1
 
-  - name: "Configure 'Network access - Remotely accessible registry paths'"
+  - name: "Configure 'Network access: Remotely accessible registry paths'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Securepipeservers\Winreg\AllowedExactpaths
       name: "Machine"
@@ -752,8 +914,10 @@
       type: multistring
     tags:
      - CCE-37194-8
+     - 2.3.10.7
+     - level-1
 
-  - name: "Configure 'Network access - Remotely accessible registry paths and sub-paths'"
+  - name: "Configure 'Network access: Remotely accessible registry paths and sub-paths'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Securepipeservers\Winreg\Allowedpaths
       name: "Machine"
@@ -761,8 +925,10 @@
       type: multistring
     tags:
      - CCE-36347-3
+     - 2.3.10.8
+     - level-1
 
-  - name: "Ensure 'Network access - Restrict anonymous access to Named Pipes and Shares' is set to 'Enabled'"
+  - name: "Ensure 'Network access: Restrict anonymous access to Named Pipes and Shares' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Lanmanserver\Parameters
       name: "RestrictNullSessAccess"
@@ -770,8 +936,10 @@
       type: dword
     tags:
      - CCE-36021-4
+     - 2.3.10.9
+     - level-1
 
-  - name: "Ensure 'Network access - Restrict clients allowed to make remote calls to SAM' is set to 'Administrators - Remote Access - Allow'"
+  - name: "Ensure 'Network access: Restrict clients allowed to make remote calls to SAM' is set to 'Administrators: Remote Access: Allow' (MS only)"
     win_regedit:
       path: HKLM:\System\CurrentControlSet\Control\Lsa
       name: "RestrictRemoteSAM"
@@ -779,8 +947,10 @@
       type: string
     tags:
      - CCE-Null
+     - 2.3.10.10
+     - level-1
 
-  - name: "Ensure 'Network access - Shares that can be accessed anonymously' is set to 'None'"
+  - name: "Ensure 'Network access: Shares that can be accessed anonymously' is set to 'None'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Lanmanserver\Parameters
       name: "NullSessionShares"
@@ -788,8 +958,10 @@
       type: multistring
     tags:
      - CCE-38095-6
+     - 2.3.10.11
+     - level-1
 
-  - name: "Ensure 'Network access - Sharing and security model for local accounts' is 'Classic - local users authenticate as themselves'"
+  - name: "Ensure 'Network access: Sharing and security model for local accounts' is set to 'Classic -local users authenticate as themselves'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Lsa
       name: "ForceGuest"
@@ -797,8 +969,10 @@
       type: dword
     tags:
      - CCE-37623-6
+     - 2.3.10.12
+     - level-1
 
-  - name: "Ensure 'Network security - Allow Local System to use computer identity for NTLM' is set to 'Enabled'"
+  - name: "Ensure 'Network security: Allow Local System to use computer identity for NTLM' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Lsa
       name: "UseMachineId"
@@ -806,8 +980,10 @@
       type: dword
     tags:
      - CCE-38341-4
+     - 2.3.11.1
+     - level-1
 
-  - name: "Ensure 'Network security - Allow LocalSystem NULL session fallback' is set to 'Disabled'"
+  - name: "Ensure 'Network security: Allow LocalSystem NULL session fallback' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Lsa\Msv1_0
       name: "allownullsessionfallback"
@@ -815,8 +991,10 @@
       type: dword
     tags:
      - CCE-37035-3
+     - 2.3.11.2
+     - level-1
 
-  - name: "Ensure 'Network Security - Allow PKU2U authentication requests to this computer to use online identities' is set to 'Disabled'"
+  - name: "Ensure 'Network Security: Allow PKU2U authentication requests to this computer to use online identities' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Lsa\Pku2U
       name: "AllowOnlineID"
@@ -824,8 +1002,10 @@
       type: dword
     tags:
      - CCE-38047-7
+     - 2.3.11.3
+     - level-1
 
-  - name: "Ensure 'Network security - Configure encryption types allowed for Kerberos' is set"
+  - name: "Ensure 'Network security: Configure encryption types allowed for Kerberos' is set to 'RC4_HMAC_MD5, AES128_HMAC_SHA1, AES256_HMAC_SHA1, Future encryption types'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System\Kerberos\Parameters
       name: "SupportedEncryptionTypes"
@@ -833,8 +1013,10 @@
       type: dword
     tags:
      - CCE-37755-6
+     - 2.3.11.4
+     - level-1
 
-  - name: "Ensure 'Network security - Do not store LAN Manager hash value on next password change' is set to 'Enabled'"
+  - name: "Ensure 'Network security: Do not store LAN Manager hash value on next password change' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Lsa
       name: "NoLMHash"
@@ -842,9 +1024,11 @@
       type: dword
     tags:
      - CCE-36326-7
+     - 2.3.11.5
+     - level-1
      - passwords
 
-  - name: "Ensure 'Network security - Force logoff when logon hours expire' is set to 'Enabled'"
+  - name: "Ensure 'Network security: Force logoff when logon hours expire' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\CurrentControlSet\Services\LanManServer\Parameters
       name: "EnableForcedLogOff"
@@ -852,8 +1036,10 @@
       type: dword
     tags:
      - CCE-36270-7
+     - 2.3.11.6
+     - level-1
 
-  - name: "Ensure 'Network security - LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM&NTLM'"
+  - name: "Ensure 'Network security: LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM & NTLM'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Lsa
       name: "LMCompatibilityLevel"
@@ -861,8 +1047,10 @@
       type: dword
     tags:
      - CCE-36173-3
+     - 2.3.11.7
+     - level-1
 
-  - name: "Ensure 'Network security - LDAP client signing requirements' is set to 'Negotiate signing' or higher"
+  - name: "Ensure 'Network security: LDAP client signing requirements' is set to 'Negotiate signing' or higher"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Ldap
       name: "LDAPClientIntegrity"
@@ -870,8 +1058,10 @@
       type: dword
     tags:
      - CCE-36858-9
+     - 2.3.11.8
+     - level-1
 
-  - name: "Ensure 'Network security - Minimum session security for NTLM SSP based (including secure RPC) clients' is set"
+  - name: "Ensure 'Network security: Minimum session security for NTLM SSP based (including secure RPC) clients' is set to 'Require NTLMv2 session security, Require 128-bit encryption'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Lsa\Msv1_0
       name: "NTLMMinClientSec"
@@ -879,8 +1069,10 @@
       type: dword
     tags:
      - CCE-37553-5
+     - 2.3.11.9
+     - level-1
 
-  - name: "Ensure 'Network security - Minimum session security for NTLM SSP based (including secure RPC) servers' is set"
+  - name: "Ensure 'Network security: Minimum session security for NTLM SSP based (including secure RPC) servers' is set to 'Require NTLMv2 session security, Require 128-bit encryption'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Lsa\Msv1_0
       name: "NTLMMinServerSec"
@@ -888,8 +1080,10 @@
       type: dword
     tags:
      - CCE-37835-6
+     - 2.3.11.10
+     - level-1
 
-  - name: "Ensure 'Shutdown - Allow system to be shut down without having to log on' is set to 'Disabled'"
+  - name: "Ensure 'Shutdown: Allow system to be shut down without having to log on' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: "ShutdownWithoutLogon"
@@ -897,8 +1091,10 @@
       type: dword
     tags:
      - CCE-36788-8
+     - 2.3.13.1
+     - level-1
 
-  - name: "Ensure 'System objects - Require case insensitivity for non-Windows subsystems' is set to 'Enabled'"
+  - name: "Ensure 'System objects: Require case insensitivity for non-Windows subsystems' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Session Manager\Kernel
       name: "ObCaseInsensitive"
@@ -906,8 +1102,10 @@
       type: dword
     tags:
      - CCE-37885-1
+     - 2.3.15.1
+     - level-1
 
-  - name: "Ensure 'System objects - Strengthen default permissions of internal system objects (e.g. Symbolic Links)' is set to 'Enabled'"
+  - name: "Ensure 'System objects: Strengthen default permissions of internal system objects (e.g. Symbolic Links)' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Session Manager
       name: "ProtectionMode"
@@ -915,8 +1113,10 @@
       type: dword
     tags:
      - CCE-37644-2
+     - 2.3.15.2
+     - level-1
 
-  - name: "Ensure 'User Account Control - Admin Approval Mode for the Built-in Administrator account' is set to 'Enabled'"
+  - name: "Ensure 'User Account Control: Admin Approval Mode for the Built-in Administrator account' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: "FilterAdministratorToken"
@@ -924,9 +1124,11 @@
       type: dword
     tags:
      - CCE-36494-3
+     - 2.3.17.1
+     - level-1
      - uac
 
-  - name: "Ensure 'User Account Control - Allow UIAccess applications to prompt for elevation without using the secure desktop' is set"
+  - name: "Ensure 'User Account Control: Allow UIAccess applications to prompt for elevation without using the secure desktop' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: "EnableUIADesktopToggle"
@@ -934,9 +1136,11 @@
       type: dword
     tags:
      - CCE-36863-9
+     - 2.3.17.2
+     - level-1
      - uac
 
-  - name: "Ensure 'User Account Control - Behavior of the elevation prompt for administrators in Admin Approval Mode' is set"
+  - name: "Ensure 'User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode' is set to 'Prompt for consent on the secure desktop'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: "ConsentPromptBehaviorAdmin"
@@ -944,9 +1148,11 @@
       type: dword
     tags:
      - CCE-37029-6
+     - 2.3.17.3
+     - level-1
      - uac
 
-  - name: "Ensure 'User Account Control - Behavior of the elevation prompt for standard users' is 'Automatically deny elevation requests'"
+  - name: "Ensure 'User Account Control: Behavior of the elevation prompt for standard users' is set to 'Automatically deny elevation requests'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: "ConsentPromptBehaviorUser"
@@ -954,9 +1160,11 @@
       type: dword
     tags:
      - CCE-36864-7
+     - 2.3.17.4
+     - level-1
      - uac
 
-  - name: "Ensure 'User Account Control - Detect application installations and prompt for elevation' is set to 'Enabled'"
+  - name: "Ensure 'User Account Control: Detect application installations and prompt for elevation' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: "EnableInstallerDetection"
@@ -964,9 +1172,11 @@
       type: dword
     tags:
      - CCE-36533-8
+     - 2.3.17.5
+     - level-1
      - uac
 
-  - name: "Ensure 'User Account Control - Only elevate UIAccess applications that are installed in secure locations' is set to 'Enabled'"
+  - name: "Ensure 'User Account Control: Only elevate UIAccess applications that are installed in secure locations' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: "EnableSecureUIAPaths"
@@ -974,9 +1184,11 @@
       type: dword
     tags:
      - CCE-37057-7
+     - 2.3.17.6
+     - level-1
      - uac
 
-  - name: "Ensure 'User Account Control - Run all administrators in Admin Approval Mode' is set to 'Enabled'"
+  - name: "Ensure 'User Account Control: Run all administrators in Admin Approval Mode' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: "EnableLUA"
@@ -984,9 +1196,11 @@
       type: dword
     tags:
      - CCE-36869-6
+     - 2.3.17.7
+     - level-1
      - uac
 
-  - name: "Ensure 'User Account Control - Switch to the secure desktop when prompting for elevation' is set to 'Enabled'"
+  - name: "Ensure 'User Account Control: Switch to the secure desktop when prompting for elevation' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: "PromptOnSecureDesktop"
@@ -994,9 +1208,11 @@
       type: dword
     tags:
      - CCE-36866-2
+     - 2.3.17.8
+     - level-1
      - uac
 
-  - name: "Ensure 'User Account Control - Virtualize file and registry write failures to per-user locations' is set to 'Enabled'"
+  - name: "Ensure 'User Account Control: Virtualize file and registry write failures to per-user locations' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: "EnableVirtualization"
@@ -1004,9 +1220,11 @@
       type: dword
     tags:
      - CCE-37064-3
+     - 2.3.17.9
+     - level-1
      - uac
 
-  - name: "Ensure 'Interactive logon - Number of previous logons to cache (in case domain controller is not available)' is set to '4 or fewer' [GSA-1 or fewer]"
+  - name: "Ensure 'Interactive logon: Number of previous logons to cache (in case domain controller is not available)' is set to '4 or fewer logon(s)' (MS only) "
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows Nt\Currentversion\Winlogon
       name: "cachedlogonscount"
@@ -1014,9 +1232,11 @@
       type: string
     tags:
      - CCE-37439-7
+     - 2.3.7.6
+     - level-2
      - uac
 
-  - name: "Ensure 'Network access - Do not allow storage of passwords and credentials for network authentication' is set to 'Enabled'"
+  - name: "Ensure 'Network access: Do not allow storage of passwords and credentials for network authentication' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Lsa
       name: "DisableDomainCreds"
@@ -1024,10 +1244,11 @@
       type: dword
     tags:
      - CCE-38119-4
-      passwords
-      
-      
-  - name: "Ensure 'Windows Firewall - Domain - Firewall state' is set to 'On (recommended)'"
+     - 2.3.10.4
+     - level-2
+     - passwords
+
+  - name: "Ensure 'WindowsFirewall: Domain: Firewall state' is set to 'On (recommended)'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Domainprofile
       name: "EnableFirewall"
@@ -1035,9 +1256,11 @@
       type: dword
     tags:
      - CCE-36062-8
+     - 9.1.1
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Domain - Inbound connections' is set to 'Block (default)'"
+  - name: "Ensure 'Windows Firewall: Domain: Inbound connections' is set to 'Block (default)'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Domainprofile
       name: "DefaultInboundAction"
@@ -1045,9 +1268,11 @@
       type: dword
     tags:
      - CCE-38117-8
+     - 9.1.2
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Domain - Outbound connections' is set to 'Allow (default)'"
+  - name: "Ensure 'Windows Firewall: Domain:Outbound connections' is set to 'Allow (default)'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Domainprofile
       name: "DefaultOutboundAction"
@@ -1055,9 +1280,11 @@
       type: dword
     tags:
      - CCE-36146-9
+     - 9.1.3
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Domain - Settings - Display a notification' is set to 'No'"
+  - name: "Ensure 'Windows Firewall: Domain: Settings: Display a notification' is set to 'No'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Domainprofile
       name: "DisableNotifications"
@@ -1065,9 +1292,11 @@
       type: dword
     tags:
      - CCE-38041-0
+     - 9.1.4
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Domain - Settings - Apply local firewall rules' is set to 'Yes (default)'"
+  - name: "Ensure 'Windows Firewall: Domain: Settings: Apply local firewall rules' is set to 'Yes (default)'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Domainprofile
       name: "AllowLocalPolicyMerge"
@@ -1075,9 +1304,11 @@
       type: dword
     tags:
      - CCE-37860-4
+     - 9.1.5
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Domain - Settings - Apply local connection security rules' is set to 'Yes (default)'"
+  - name: "Ensure 'Windows Firewall: Domain: Settings: Apply local connection security rules' is set to 'Yes (default)'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Domainprofile
       name: "AllowLocalIPsecPolicyMerge"
@@ -1085,9 +1316,11 @@
       type: dword
     tags:
      - CCE-38040-2
+     - 9.1.6
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Domain - Logging - Name' is set to '%SYSTEMROOT%\\System32\\logfiles\\firewall\\domainfw.log'"
+  - name: "Ensure 'Windows Firewall: Domain: Logging: Name' is set to '%SYSTEMROOT%\\System32\\logfiles\\firewall\\domainfw.log'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Domainprofile\Logging
       name: "LogFilePath"
@@ -1095,9 +1328,11 @@
       type: string
     tags:
      - CCE-37482-7
+     - 9.1.7
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Domain - Logging - Size limit (KB)' is set to '16,384 KB or greater'"
+  - name: "Ensure 'Windows Firewall: Domain: Logging: Size limit (KB)' is set to '16,384 KB or greater' "
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Domainprofile\Logging
       name: "LogFileSize"
@@ -1105,9 +1340,11 @@
       type: dword
     tags:
      - CCE-36088-3
+     - 9.1.8
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Domain - Logging - Log dropped packets' is set to 'Yes'"
+  - name: "Ensure 'Windows Firewall: Domain: Logging: Log dropped packets' is set to 'Yes'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Domainprofile\Logging
       name: "LogDroppedPackets"
@@ -1115,9 +1352,11 @@
       type: dword
     tags:
      - CCE-37523-8
+     - 9.1.9
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Domain - Logging - Log successful connections' is set to 'Yes'"
+  - name: "Ensure 'Windows Firewall: Domain: Logging: Log successful connections' is set to 'Yes'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Domainprofile\Logging
       name: "LogSuccessfulConnections"
@@ -1125,9 +1364,11 @@
       type: dword
     tags:
      - CCE-36393-7
+     - 9.1.10
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Private - Firewall state' is set to 'On (recommended)'"
+  - name: "Ensure 'Windows Firewall: Private: Firewall state' is set to 'On (recommended)'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Privateprofile
       name: "EnableFirewall"
@@ -1135,9 +1376,11 @@
       type: dword
     tags:
      - CCE-38239-0
+     - 9.2.1
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Private - Inbound connections' is set to 'Block (default)'"
+  - name: "Ensure 'Windows Firewall: Private: Inbound connections' is set to 'Block (default)'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Privateprofile
       name: "DefaultInboundAction"
@@ -1145,9 +1388,11 @@
       type: dword
     tags:
      - CCE-38042-8
+     - 9.2.2
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Private - Outbound connections' is set to 'Allow (default)'"
+  - name: "Ensure 'Windows Firewall: Private: Outbound connections' is set to 'Allow (default)'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Privateprofile
       name: "DefaultOutboundAction"
@@ -1155,9 +1400,11 @@
       type: dword
     tags:
      - CCE-38332-3
+     - 9.2.3
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Private - Settings - Display a notification' is set to 'No'"
+  - name: "Ensure 'Windows Firewall: Private: Settings: Display a notification' is set to 'No'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Privateprofile
       name: "DisableNotifications"
@@ -1165,9 +1412,11 @@
       type: dword
     tags:
      - CCE-37621-0
+     - 9.2.4
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Private - Settings - Apply local firewall rules' is set to 'Yes (default)'"
+  - name: "Ensure 'Windows Firewall: Private: Settings: Apply local firewall rules' is set to 'Yes (default)'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Privateprofile
       name: "AllowLocalPolicyMerge"
@@ -1175,9 +1424,11 @@
       type: dword
     tags:
      - CCE-37438-9
+     - 9.2.5
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Private - Settings - Apply local connection security rules' is set to 'Yes (default)'"
+  - name: "Ensure 'Windows Firewall: Private: Settings: Apply local connection security rules' is set to 'Yes (default)'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Privateprofile
       name: "AllowLocalIPsecPolicyMerge"
@@ -1185,9 +1436,11 @@
       type: dword
     tags:
      - CCE-36063-6
+     - 9.2.6
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Private - Logging - Name' is set to '%SYSTEMROOT%\\System32\\logfiles\\firewall\\privatefw.log'"
+  - name: "Ensure 'Windows Firewall: Private: Logging: Name' is set to '%SYSTEMROOT%\\System32\\logfiles\\firewall\\privatefw.log'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Privateprofile\Logging
       name: "LogFilePath"
@@ -1195,9 +1448,11 @@
       type: string
     tags:
      - CCE-37569-1
+     - 9.2.7
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Private - Logging - Size limit (KB)' is set to '16,384 KB or greater'"
+  - name: "Ensure 'Windows Firewall: Private: Logging: Size limit (KB)' is set to '16,384 KB or greater' "
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Privateprofile\Logging
       name: "LogFileSize"
@@ -1205,9 +1460,11 @@
       type: dword
     tags:
      - CCE-38178-0
+     - 9.2.8
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Private - Logging - Log dropped packets' is set to 'Yes'"
+  - name: "Ensure 'Ensure 'Windows Firewall: Private: Logging: Log dropped packets' is set to 'Yes'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Privateprofile\Logging
       name: "LogDroppedPackets"
@@ -1215,9 +1472,11 @@
       type: dword
     tags:
      - CCE-35972-9
+     - 9.2.9
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Private - Logging - Log successful connections' is set to 'Yes'"
+  - name: "Ensure 'Windows Firewall: Private: Logging; Log successful connections' is set to 'Yes'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Privateprofile\Logging
       name: "LogSuccessfulConnections"
@@ -1225,8 +1484,10 @@
       type: dword
     tags:
      - CCE-37387-8
+     - 9.2.10
+     - level-1
 
-  - name: "Ensure 'Windows Firewall - Public - Firewall state' is set to 'On (recommended)'"
+  - name: "Ensure 'Windows Firewall: Public: Firewall state' is set to 'On (recommended)'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Publicprofile
       name: "EnableFirewall"
@@ -1235,9 +1496,11 @@
 
     tags:
      - CCE-37862-0
+     - 9.3.1
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Public - Inbound connections' is set to 'Block (default)'"
+  - name: "Ensure 'Windows Firewall: Public: Inbound connections' is set to 'Block (default)'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Publicprofile
       name: "DefaultInboundAction"
@@ -1245,9 +1508,11 @@
       type: dword
     tags:
      - CCE-36057-8
+     - 9.3.2
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Public - Outbound connections' is set to 'Allow (default)'"
+  - name: "Ensure 'Windows Firewall: Public: Outbound connections' is set to 'Allow (default)'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Publicprofile
       name: "DefaultOutboundAction"
@@ -1255,9 +1520,11 @@
       type: dword
     tags:
      - CCE-37434-8
+     - 9.3.3
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Public - Settings - Display a notification' is set to 'Yes'"
+  - name: "Ensure 'Windows Firewall: Public: Settings: Display a notification' is set to 'Yes'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Publicprofile
       name: "DisableNotifications"
@@ -1265,8 +1532,11 @@
       type: dword
     tags:
      - CCE-38043-6
+     - 9.3.4
+     - level-1
+     - firewall
 
-  - name: "Ensure 'Windows Firewall - Public - Settings - Apply local firewall rules' is set to 'No'"
+  - name: "Ensure 'Windows Firewall: Public: Settings: Apply local firewall rules' is set to 'No'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Publicprofile
       name: "AllowLocalPolicyMerge"
@@ -1274,9 +1544,11 @@
       type: dword
     tags:
      - CCE-37861-2
+     - 9.3.5
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Public - Settings - Apply local connection security rules' is set to 'No'"
+  - name: "Ensure 'Windows Firewall: Public: Settings: Apply local connection security rules' is set to 'No'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Publicprofile
       name: "AllowLocalIPsecPolicyMerge"
@@ -1284,6 +1556,8 @@
       type: dword
     tags:
      - CCE-36268-1
+     - 9.3.6
+     - level-1
      - firewall
 
   - name: "Ensure 'Windows Firewall - Public - Logging - Name' is set to '%SYSTEMROOT%\\System32\\logfiles\\firewall\\publicfw.log'"
@@ -1294,9 +1568,11 @@
       type: string
     tags:
      - CCE-37266-4
+     - 9.3.7
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Public - Logging - Size limit (KB)' is set to '16,384 KB or greater'"
+  - name: "Ensure 'Windows Firewall: Public: Logging: Size limit (KB)' is set to '16,384 KB or greater'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Publicprofile\Logging
       name: "LogFileSize"
@@ -1304,9 +1580,11 @@
       type: dword
     tags:
      - CCE-36395-2
+     - 9.3.8
+     - level-1
      - firewall
 
-  - name: "Ensure 'Windows Firewall - Public - Logging - Log dropped packets' is set to 'Yes'"
+  - name: "Ensure 'Windows Firewall: Public: Logging: Log dropped packets' is set to 'Yes'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Publicprofile\Logging
       name: "LogDroppedPackets"
@@ -1314,8 +1592,11 @@
       type: dword
     tags:
      - CCE-37265-6
+     - 9.3.9
+     - level-1
+     - firewall
 
-  - name: "Ensure 'Windows Firewall - Public - Logging - Log successful connections' is set to 'Yes'"
+  - name: "Ensure 'Windows Firewall: Public: Logging: Log successful connections' is set to 'Yes'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windowsfirewall\Publicprofile\Logging
       name: "LogSuccessfulConnections"
@@ -1323,6 +1604,8 @@
       type: dword
     tags:
      - CCE-36394-5
+     - 9.3.10
+     - level-1
      - firewall
 
   - name: "Ensure 'Audit Credential Validation' is set to 'Success and Failure'"
@@ -1331,6 +1614,8 @@
       audit_type: success, failure
     tags:
      - CCE-37741-6
+     - 17.1.1
+     - level-1
 
   - name: "Ensure 'Audit Application Group Management' is set to 'Success and Failure'"
     win_audit_policy_system:
@@ -1338,6 +1623,8 @@
       audit_type: success, failure
     tags:
      - CCE-38329-9
+     - 17.2.1
+     - level-1
 
   - name: "Ensure 'Audit Computer Account Management' is set to 'Success and Failure'"
     win_audit_policy_system:
@@ -1345,6 +1632,8 @@
       audit_type: success, failure
     tags:
      - CCE-38004-8
+     - 17.2.2
+     - level-1
 
   - name: "Ensure 'Audit Other Account Management Events' is set to 'Success and Failure'"
     win_audit_policy_system:
@@ -1352,6 +1641,8 @@
       audit_type: success, failure
     tags:
      - CCE-37855-4
+     - 17.2.4
+     - level-1
 
   - name: "Ensure 'Audit Security Group Management' is set to 'Success and Failure'"
     win_audit_policy_system:
@@ -1359,6 +1650,8 @@
       audit_type: success, failure
     tags:
      - CCE-38034-5
+     - 17.2.5
+     - level-1
 
   - name: "Ensure 'Audit User Account Management' is set to 'Success and Failure'"
     win_audit_policy_system:
@@ -1366,6 +1659,8 @@
       audit_type: success, failure
     tags:
      - CCE-37856-2
+     - 17.2.6
+     - level-1
 
   - name: "Ensure 'Audit PNP Activity' is set to 'Success'"
     win_audit_policy_system:
@@ -1373,6 +1668,8 @@
       audit_type: success
     tags:
      - CCE-Null
+     - 17.3.1
+     - level-1
 
   - name: "Ensure 'Audit Process Creation' is set to 'Success'"
     win_audit_policy_system:
@@ -1380,6 +1677,8 @@
       audit_type: success
     tags:
      - CCE-36059-4
+     - 17.3.2
+     - level-1
 
   - name: "Ensure 'Audit Account Lockout' is set to 'Success and Failure'"
     win_audit_policy_system:
@@ -1387,6 +1686,8 @@
       audit_type: success, failure
     tags:
      - CCE-37133-6
+     - 17.5.1
+     - level-1
 
   - name: "Ensure 'Audit Group Membership' is set to 'Success'"
     win_audit_policy_system:
@@ -1394,6 +1695,8 @@
       audit_type: success
     tags:
      - CCE-Null
+     - 17.5.2
+     - level-1
 
   - name: "Ensure 'Audit Logoff' is set to 'Success'"
     win_audit_policy_system:
@@ -1401,6 +1704,8 @@
       audit_type: success
     tags:
      - CCE-38237-4
+     - 17.5.3
+     - level-1
 
   - name: "Ensure 'Audit Logon' is set to 'Success and Failure'"
     win_audit_policy_system:
@@ -1408,6 +1713,8 @@
       audit_type: success, failure
     tags:
      - CCE-38036-0
+     - 17.5.4
+     - level-1
 
   - name: "Ensure 'Audit Other Logon/Logoff Events' is set to 'Success and Failure'"
     win_audit_policy_system:
@@ -1415,6 +1722,8 @@
       audit_type: success, failure
     tags:
      - CCE-36322-6
+     - 17.5.5
+     - level-1
 
   - name: "Ensure 'Audit Special Logon' is set to 'Success'"
     win_audit_policy_system:
@@ -1422,6 +1731,8 @@
       audit_type: success
     tags:
      - CCE-36266-5
+     - 17.5.6
+     - level-1
 
   - name: "Ensure 'Audit Removable Storage' is set to 'Success and Failure'"
     win_audit_policy_system:
@@ -1429,6 +1740,8 @@
       audit_type: success, failure
     tags:
      - CCE-37617-8
+     - 17.6.1
+     - level-1
 
   - name: "Ensure 'Audit Audit Policy Change' is set to 'Success and Failure'"
     win_audit_policy_system:
@@ -1436,6 +1749,8 @@
       audit_type: success, failure
     tags:
      - CCE-38028-7
+     - 17.7.1
+     - level-1
 
   - name: "Ensure 'Audit Authentication Policy Change' is set to 'Success'"
     win_audit_policy_system:
@@ -1443,6 +1758,8 @@
       audit_type: success
     tags:
      - CCE-38327-3
+     - 17.7.2
+     - level-1
 
   - name: "Ensure 'Audit Authorization Policy Change' is set to 'Success'"
     win_audit_policy_system:
@@ -1450,6 +1767,8 @@
       audit_type: success
     tags:
      - CCE-36320-0
+     - 17.7.3
+     - level-1
 
   - name: "Ensure 'Audit Sensitive Privilege Use' is set to 'Success and Failure'"
     win_audit_policy_system:
@@ -1457,6 +1776,8 @@
       audit_type: success, failure
     tags:
      - CCE-36267-3
+     - 17.8.1
+     - level-1
 
   - name: "Ensure 'Audit IPsec Driver' is set to 'Success and Failure'"
     win_audit_policy_system:
@@ -1464,6 +1785,8 @@
       audit_type: success, failure
     tags:
      - CCE-37853-9
+     - 17.9.1
+     - level-1
 
   - name: "Ensure 'Audit Other System Events' is set to 'Success and Failure'"
     win_audit_policy_system:
@@ -1471,6 +1794,8 @@
       audit_type: success, failure
     tags:
      - CCE-38030-3
+     - 17.9.2
+     - level-1
 
   - name: "Ensure 'Audit Security State Change' is set to 'Success'"
     win_audit_policy_system:
@@ -1478,6 +1803,8 @@
       audit_type: success
     tags:
      - CCE-38114-5
+     - 17.9.3
+     - level-1
 
   - name: "Ensure 'Audit Security System Extension' is set to 'Success and Failure'"
     win_audit_policy_system:
@@ -1485,6 +1812,8 @@
       audit_type: success, failure
     tags:
      - CCE-36144-4
+     - 17.9.4
+     - level-1
 
   - name: "Ensure 'Audit System Integrity' is set to 'Success and Failure'"
     win_audit_policy_system:
@@ -1492,7 +1821,9 @@
       audit_type: success, failure
     tags:
      - CCE-37132-8
-      
+     - 17.9.5
+     - level-1
+
   - name: "Ensure 'Prevent enabling lock screen camera' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Personalization
@@ -1501,6 +1832,8 @@
       type: dword
     tags:
      - CCE-38347-1
+     - 18.1.1.1
+     - level-1
 
   - name: "Ensure 'Prevent enabling lock screen slide show' is set to 'Enabled'"
     win_regedit:
@@ -1510,6 +1843,8 @@
       type: dword
     tags:
      - CCE-38348-9
+     - 18.1.1.2
+     - level-1
 
   - name: "Ensure 'Allow Input Personalization' is set to 'Disabled'"
     win_regedit:
@@ -1519,8 +1854,10 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.1.2.1
+     - level-1
 
-  - name: "Ensure 'MSS - (AutoAdminLogon) Enable Automatic Logon (not recommended)' is set to 'Disabled'"
+  - name: "Ensure 'MSS: (AutoAdminLogon) Enable Automatic Logon (not recommended)' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows Nt\Currentversion\Winlogon
       name: "AutoAdminLogon"
@@ -1528,8 +1865,10 @@
       type: string
     tags:
      - CCE-37067-6
+     - 18.3.1
+     - level-1
 
-  - name: "Ensure 'MSS - (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)' is set"
+  - name: "Ensure 'MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Tcpip6\Parameters
       name: "DisableIPSourceRouting"
@@ -1537,8 +1876,10 @@
       type: dword
     tags:
      - CCE-36871-2
+     - 18.3.2
+     - level-1
 
-  - name: "Ensure 'MSS - (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)' is set"
+  - name: "Ensure 'MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Tcpip\Parameters
       name: "DisableIPSourceRouting"
@@ -1546,8 +1887,10 @@
       type: dword
     tags:
      - CCE-36535-3
+     - 18.3.3
+     - level-1
 
-  - name: "Ensure 'MSS - (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes' is set to 'Disabled'"
+  - name: "Ensure 'MSS: (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Tcpip\Parameters
       name: "EnableICMPRedirect"
@@ -1555,8 +1898,10 @@
       type: dword
     tags:
      - CCE-37988-3
+     - 18.3.4
+     - level-1
 
-  - name: "Ensure 'MSS - (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers' is set"
+  - name: "Ensure 'MSS: (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Netbt\Parameters
       name: "nonamereleaseondemand"
@@ -1564,8 +1909,10 @@
       type: dword
     tags:
      - CCE-36879-5
+     - 18.3.6
+     - level-1
 
-  - name: "Ensure 'MSS - (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' is set to 'Enabled'"
+  - name: "Ensure 'MSS: (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Session Manager
       name: "SafeDllSearchMode"
@@ -1573,8 +1920,10 @@
       type: dword
     tags:
      - CCE-36351-5
+     - 18.3.8
+     - level-1
 
-  - name: "Ensure 'MSS - (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled - 5 or fewer seconds'"
+  - name: "Ensure 'MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled: 5 or fewer seconds'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows Nt\Currentversion\Winlogon
       name: "ScreenSaverGracePeriod"
@@ -1582,8 +1931,10 @@
       type: string
     tags:
      - CCE-37993-3
+     - 18.3.9
+     - level-1
 
-  - name: "Ensure 'MSS - (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set"
+  - name: "Ensure 'MSS: (WarningLevel) Percentagethreshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Eventlog\Security
       name: "WarningLevel"
@@ -1591,8 +1942,10 @@
       type: dword
     tags:
      - CCE-36880-3
+     - 18.3.12
+     - level-1
 
-  - name: " 'NetBIOS node type' to 'P-node' (Ensure NetBT Parameter 'NodeType' is set to '0x2 (2)')"
+  - name: "Set 'NetBIOS node type' to 'P-node' (Ensure NetBT Parameter 'NodeType' is set to '0x2 (2)') (MS Only)"
     win_regedit:
       path: HKLM:\System\CurrentControlSet\Services\NetBT\Parameters
       name: "NodeType"
@@ -1600,8 +1953,10 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.4.4.1
+     - level-1
 
-  - name: "Ensure 'Turn off multicast name resolution' is set to 'Enabled'"
+  - name: "Ensure 'Turn off multicast name resolution' is set to 'Enabled' (MS Only)"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows NT\DNSClient
       name: "EnableMulticast"
@@ -1609,6 +1964,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.4.4.2
+     - level-1
 
   - name: "Ensure 'Enable insecure guest logons' is set to 'Disabled'"
     win_regedit:
@@ -1618,6 +1975,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.4.8.1
+     - level-1
 
   - name: "Ensure 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled'"
     win_regedit:
@@ -1627,6 +1986,8 @@
       type: dword
     tags:
      - CCE-38002-2
+     - 18.4.11.2
+     - level-1
 
   - name: "Ensure 'Prohibit use of Internet Connection Sharing on your DNS domain network' is set to 'Enabled'"
     win_regedit:
@@ -1636,6 +1997,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.4.11.3
+     - level-1
 
   - name: "Ensure 'Require domain users to elevate when setting a network's location' is set to 'Enabled'"
     win_regedit:
@@ -1645,8 +2008,10 @@
       type: dword
     tags:
      - CCE-38188-9
+     - 18.4.11.4
+     - level-1
 
-  - name: "dened UNC Paths is set to 'Enabled, with 'Require Mutual Authentication' and 'Require Integrity' set for NETLOGON shares'"
+  - name: "Ensure 'Hardened UNC Paths' is set to 'Enabled, with 'Require Mutual Authentication' and 'Require Integrity' set for all NETLOGON and SYSVOL shares'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Networkprovider\Hardenedpaths
       name: "\\\\*\\NETLOGON"
@@ -1654,8 +2019,10 @@
       type: string
     tags:
      - CCE-Null
+     - 18.4.14.1
+     - level-1
 
-  - name: "dened UNC Paths is set to 'Enabled, with 'Require Mutual Authentication' and 'Require Integrity' set for SYSVOL shares'"
+  - name: "Ensure 'Hardened UNC Paths' is set to 'Enabled, with 'Require Mutual Authentication' and 'Require Integrity' set for all NETLOGON and SYSVOL shares' II"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Networkprovider\Hardenedpaths
       name: "\\\\*\\SYSVOL"
@@ -1663,6 +2030,8 @@
       type: string
     tags:
      - CCE-Null
+     - 18.4.14.1
+     - level-1
 
   - name: "Ensure 'Minimize the number of simultaneous connections to the Internet or a Windows Domain' is set to 'Enabled'"
     win_regedit:
@@ -1672,6 +2041,8 @@
       type: dword
     tags:
      - CCE-38338-0
+     - 18.4.21.1
+     - level-1
 
   - name: "Ensure 'Apply UAC restrictions to local accounts on network logons' is set to 'Enabled'"
     win_regedit:
@@ -1681,6 +2052,8 @@
       type: dword
     tags:
      - CCE-37069-2
+     - 18.6.1
+     - level-1
 
   - name: "Ensure 'WDigest Authentication' is set to 'Disabled'"
     win_regedit:
@@ -1690,6 +2063,8 @@
       type: dword
     tags:
      - CCE-38444-6
+     - 18.6.2
+     - level-1
 
   - name: "Ensure 'Include command line in process creation events' is set to 'Disabled'"
     win_regedit:
@@ -1699,8 +2074,10 @@
       type: dword
     tags:
      - CCE-36925-6
+     - 18.8.3.1
+     - level-1
 
-  - name: "Ensure 'Boot-Start Driver Initialization Policy' is set to 'Enabled - Good, unknown and bad but critical'"
+  - name: "Ensure 'Boot-Start Driver Initialization Policy' is set to 'Enabled: Good, unknown and bad but critical'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Policies\Earlylaunch
       name: "DriverLoadPolicy"
@@ -1708,8 +2085,10 @@
       type: dword
     tags:
      - CCE-37912-3
+     - 18.8.12.1
+     - level-1
 
-  - name: "Ensure 'Configure registry policy processing - Do not apply during periodic background processing' is set to 'Enabled - FALSE'"
+  - name: "Ensure 'Configure registry policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Group Policy\{35378Eac-683F-11D2-A89A-00C04Fbbcfa2}
       name: "NoBackgroundPolicy"
@@ -1717,8 +2096,10 @@
       type: dword
     tags:
      - CCE-36169-1
+     - 18.8.19.2
+     - level-1
 
-  - name: "Ensure 'Configure registry policy processing - Process even if the Group Policy objects have not changed' is set to 'Enabled - TRUE'"
+  - name: "Ensure 'Configure registry policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Group Policy\{35378Eac-683F-11D2-A89A-00C04Fbbcfa2}
       name: "NoGPOListChanges"
@@ -1726,6 +2107,8 @@
       type: dword
     tags:
      - CCE-36169-1
+     - 18.8.19.3
+     - level-1
 
   - name: "Ensure 'Continue experiences on this device' is set to 'Disabled'"
     win_regedit:
@@ -1735,6 +2118,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.8.19.4
+     - level-1
 
   - name: "Ensure 'Turn off background refresh of Group Policy' is set to 'Disabled'"
     win_regedit:
@@ -1743,6 +2128,8 @@
       delete_key: yes
     tags:
      - CCE-37712-7
+     - 18.8.19.5
+     - level-1
 
   - name: "Ensure 'Block user from showing account details on sign-in' is set to 'Enabled'"
     win_regedit:
@@ -1752,6 +2139,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.8.25.1
+     - level-1
 
   - name: "Ensure 'Do not display network selection UI' is set to 'Enabled'"
     win_regedit:
@@ -1761,6 +2150,8 @@
       type: dword
     tags:
      - CCE-38353-9
+     - 18.8.25.2
+     - level-1
 
   - name: "Ensure 'Do not enumerate connected users on domain-joined computers' is set to 'Enabled'"
     win_regedit:
@@ -1770,6 +2161,8 @@
       type: dword
     tags:
      - CCE-37838-0
+     - 18.8.25.3
+     - level-1
 
   - name: "Ensure 'Enumerate local users on domain-joined computers' is set to 'Disabled'"
     win_regedit:
@@ -1779,6 +2172,8 @@
       type: dword
     tags:
      - CCE-35894-5
+     - 18.8.25.4
+     - level-1
 
   - name: "Ensure 'Turn off app notifications on the lock screen' is set to 'Enabled'"
     win_regedit:
@@ -1788,6 +2183,8 @@
       type: dword
     tags:
      - CCE-35893-7
+     - 18.8.25.5
+     - level-1
 
   - name: "Ensure 'Turn on convenience PIN sign-in' is set to 'Disabled'"
     win_regedit:
@@ -1797,8 +2194,10 @@
       type: dword
     tags:
      - CCE-37528-7
+     - 18.8.25.6
+     - level-1
 
-  - name: "Ensure 'Untrusted Font Blocking' is set to 'Enabled - Block untrusted fonts and log events'"
+  - name: "Ensure 'Untrusted Font Blocking' is set to 'Enabled: Block untrusted fonts and log events'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Mitigationoptions
       name: "MitigationOptions_FontBocking"
@@ -1806,6 +2205,8 @@
       type: string
     tags:
      - CCE-Null
+     - 18.8.26.1
+     - level-1
 
   - name: "Ensure 'Configure Offer Remote Assistance' is set to 'Disabled'"
     win_regedit:
@@ -1815,6 +2216,8 @@
       type: dword
     tags:
      - CCE-36388-7
+     - 18.8.31.1
+     - level-1
 
   - name: "Ensure 'Configure Solicited Remote Assistance' is set to 'Disabled'"
     win_regedit:
@@ -1824,6 +2227,8 @@
       type: dword
     tags:
      - CCE-37281-3
+     - 18.8.31.2
+     - level-1
 
   - name: "Ensure 'Enable RPC Endpoint Mapper Client Authentication' is set to 'Enabled'"
     win_regedit:
@@ -1833,6 +2238,8 @@
       type: dword
     tags:
      - CCE-37346-4
+     - 18.8.32.1
+     - level-1
 
   - name: "Ensure 'Allow Microsoft accounts to be optional' is set to 'Enabled'"
     win_regedit:
@@ -1842,6 +2249,8 @@
       type: dword
     tags:
      - CCE-38354-7
+     - 18.9.6.1
+     - level-1
 
   - name: "Ensure 'Disallow Autoplay for non-volume devices' is set to 'Enabled'"
     win_regedit:
@@ -1851,6 +2260,8 @@
       type: dword
     tags:
      - CCE-37636-8
+     - 18.9.8.1
+     - level-1
 
   - name: "Ensure 'Set the default behavior for AutoRun' is set to 'Enabled - Do not execute any autorun commands'"
     win_regedit:
@@ -1861,7 +2272,7 @@
     tags:
      - CCE-38217-6
 
-  - name: "Ensure 'Turn off Autoplay' is set to 'Enabled - All drives'"
+  - name: "Ensure 'Turn off Autoplay' is set to 'Enabled: All drives'"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\Explorer
       name: "NoDriveTypeAutoRun"
@@ -1869,6 +2280,8 @@
       type: dword
     tags:
      - CCE-36875-3
+     - 18.9.8.3
+     - level-1
 
   - name: "Ensure 'Use enhanced anti-spoofing when available' is set to 'Enabled'"
     win_regedit:
@@ -1878,6 +2291,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.10.1.1
+     - level-1
 
   - name: "Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'"
     win_regedit:
@@ -1887,6 +2302,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.13.1
+     - level-1
 
   - name: "Ensure 'Require pin for pairing' is set to 'Enabled'"
     win_regedit:
@@ -1896,6 +2313,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.14.1
+     - level-1
 
   - name: "Ensure 'Do not display the password reveal button' is set to 'Enabled'"
     win_regedit:
@@ -1905,6 +2324,8 @@
       type: dword
     tags:
      - CCE-37534-5
+     - 18.9.15.1
+     - level-1
      - passwords
 
   - name: "Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled'"
@@ -1915,8 +2336,10 @@
       type: dword
     tags:
      - CCE-36512-2
+     - 18.9.15.2
+     - level-1
 
-  - name: "Ensure 'Allow Telemetry' is set to 'Enabled - 0 - Security [Enterprise Only]'"
+  - name: "Ensure 'Allow Telemetry' is set to 'Enabled: 0 -Security [Enterprise Only]'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Datacollection
       name: "AllowTelemetry"
@@ -1924,6 +2347,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.16.1
+     - level-1
 
   - name: "Ensure 'Disable pre-release features or settings' is set to 'Disabled'"
     win_regedit:
@@ -1933,6 +2358,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.16.2
+     - level-1
 
   - name: "Ensure 'Do not show feedback notifications' is set to 'Enabled'"
     win_regedit:
@@ -1942,6 +2369,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.16.3
+     - level-1
 
   - name: "Ensure 'Toggle user control over Insider builds' is set to 'Disabled'"
     win_regedit:
@@ -1951,8 +2380,10 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.16.4
+     - level-1
 
-  - name: "Ensure 'Application - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+  - name: "Ensure 'Application: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Application
       name: "Retention"
@@ -1960,8 +2391,10 @@
       type: string
     tags:
      - CCE-37775-4
+     - 18.9.26.1.1
+     - level-1
 
-  - name: "Ensure 'Application - Specify the maximum log file size (KB)' is set to 'Enabled - 32,768 or greater' [GSA-65,538 or greater]"
+  - name: "Ensure 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Application
       name: "MaxSize"
@@ -1969,8 +2402,10 @@
       type: dword
     tags:
      - CCE-37948-7
+     - 18.9.26.1.2
+     - level-1
 
-  - name: "Ensure 'Security - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+  - name: "Ensure 'Security: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Security
       name: "Retention"
@@ -1978,8 +2413,10 @@
       type: string
     tags:
      - CCE-37145-0
+     - 18.9.26.2.1
+     - level-1
 
-  - name: "Ensure 'Security - Specify the maximum log file size (KB)' is set to 'Enabled - 196,608 or greater'"
+  - name: "Ensure 'Security: Specify the maximum log file size (KB)' is set to 'Enabled: 196,608 or greater'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Security
       name: "MaxSize"
@@ -1987,8 +2424,10 @@
       type: dword
     tags:
      - CCE-37695-4
+     - 18.9.26.2.2
+     - level-1
 
-  - name: "Ensure 'Setup - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+  - name: "Ensure 'Setup: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Setup
       name: "Retention"
@@ -1996,8 +2435,10 @@
       type: string
     tags:
      - CCE-38276-2
+     - 18.9.26.3.1
+     - level-1
 
-  - name: "Ensure 'Setup - Specify the maximum log file size (KB)' is set to 'Enabled - 32,768 or greater'"
+  - name: "Ensure 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Setup
       name: "MaxSize"
@@ -2005,8 +2446,10 @@
       type: dword
     tags:
      - CCE-37526-1
+     - 18.9.26.3.2
+     - level-1
 
-  - name: "Ensure 'System - Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+  - name: "Ensure 'System: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\System
       name: "Retention"
@@ -2014,8 +2457,10 @@
       type: string
     tags:
      - CCE-36160-0
+     - 18.9.26.4.1
+     - level-1
 
-  - name: "Ensure 'System - Specify the maximum log file size (KB)' is set to 'Enabled - 32,768 or greater' [GSA-65,538 or greater]"
+  - name: "Ensure 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\System
       name: "MaxSize"
@@ -2023,6 +2468,8 @@
       type: dword
     tags:
      - CCE-36092-5
+     - 18.9.26.4.2
+     - level-1
 
   - name: "Ensure 'Configure Windows SmartScreen' is set to 'Enabled'"
     win_regedit:
@@ -2032,6 +2479,8 @@
       type: dword
     tags:
      - CCE-35859-8
+     - 18.9.30.2
+     - level-1
 
   - name: "Ensure 'Turn off Data Execution Prevention for Explorer' is set to 'Disabled'"
     win_regedit:
@@ -2041,6 +2490,8 @@
       type: dword
     tags:
      - CCE-37809-1
+     - 18.9.30.3
+     - level-1
 
   - name: "Ensure 'Turn off heap termination on corruption' is set to 'Disabled'"
     win_regedit:
@@ -2050,6 +2501,8 @@
       type: dword
     tags:
      - CCE-36660-9
+     - 18.9.30.4
+     - level-1
 
   - name: "Ensure 'Turn off shell protocol protected mode' is set to 'Disabled'"
     win_regedit:
@@ -2059,8 +2512,10 @@
       type: dword
     tags:
      - CCE-36809-2
+     - 18.9.30.5
+     - level-1
 
-  - name: "Ensure 'Configure cookies' is set to 'Enabled - Block only 3rd-party cookies' or higher"
+  - name: "Ensure 'Configure cookies' is set to 'Enabled: Block only 3rd-party cookies' or higher"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Microsoftedge\Main
       name: "Cookies"
@@ -2068,6 +2523,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.41.3
+     - level-1
 
   - name: "Ensure 'Configure Password Manager' is set to 'Disabled'"
     win_regedit:
@@ -2077,6 +2534,8 @@
       type: string
     tags:
      - CCE-Null
+     - 18.9.41.4
+     - level-1
      - passwords
 
   - name: "Ensure 'Configure search suggestions in Address bar' is set to 'Disabled'"
@@ -2087,6 +2546,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.41.6
+     - level-1
 
   - name: "Ensure 'Configure SmartScreen Filter' is set to 'Enabled'"
     win_regedit:
@@ -2096,8 +2557,10 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.41.7
+     - level-1
 
-  - name: "Ensure 'Prevent the usage of OneDrive (formerly SkyDrive) for file storage' is set to 'Enabled'"
+  - name: "Ensure 'Prevent the usage of OneDrive for file storage' is set to 'Enabled'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Onedrive
       name: "DisableFileSyncNGSC"
@@ -2105,6 +2568,8 @@
       type: dword
     tags:
      - CCE-36939-7
+     - 18.9.47.1
+     - level-1
 
   - name: "Ensure 'Do not allow passwords to be saved' is set to 'Enabled'"
     win_regedit:
@@ -2114,6 +2579,8 @@
       type: dword
     tags:
      - CCE-36223-6
+     - 18.9.52.2.2
+     - level-1
      - passwords
 
   - name: "Ensure 'Do not allow drive redirection' is set to 'Enabled'"
@@ -2124,6 +2591,8 @@
       type: dword
     tags:
      - CCE-36509-8
+     - 18.9.52.3.3.2
+     - level-1
 
   - name: "Ensure 'Always prompt for password upon connection' is set to 'Enabled'"
     win_regedit:
@@ -2133,6 +2602,8 @@
       type: dword
     tags:
      - CCE-37929-7
+     - 18.9.52.3.9.1
+     - level-1
      - passwords
 
   - name: "Ensure 'Require secure RPC communication' is set to 'Enabled'"
@@ -2143,8 +2614,10 @@
       type: dword
     tags:
      - CCE-37567-5
+     - 18.9.52.3.9.2
+     - level-1
 
-  - name: "Ensure 'Set client connection encryption level' is set to 'Enabled - High Level'"
+  - name: "Ensure 'Set client connection encryption level' is set to 'Enabled: High Level'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services
       name: "MinEncryptionLevel"
@@ -2152,6 +2625,8 @@
       type: dword
     tags:
      - CCE-36627-8
+     - 18.9.52.3.9.3
+     - level-1
 
   - name: "Ensure 'Do not delete temp folders upon exit' is set to 'Disabled'"
     win_regedit:
@@ -2161,6 +2636,8 @@
       type: dword
     tags:
      - CCE-37946-1
+     - 18.9.52.3.11.1
+     - level-1
 
   - name: "Ensure 'Do not use temporary folders per session' is set to 'Disabled'"
     win_regedit:
@@ -2170,6 +2647,8 @@
       type: dword
     tags:
      - CCE-38180-6
+     - 18.9.52.3.11.2
+     - level-1
 
   - name: "Ensure 'Prevent downloading of enclosures' is set to 'Enabled'"
     win_regedit:
@@ -2179,6 +2658,8 @@
       type: dword
     tags:
      - CCE-37126-0
+     - 18.9.53.1
+     - level-1
 
   - name: "Ensure 'Allow Cortana' is set to 'Disabled'"
     win_regedit:
@@ -2188,6 +2669,9 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.54.2
+     - level-1
+     - cortana
 
   - name: "Ensure 'Allow Cortana above lock screen' is set to 'Disabled'"
     win_regedit:
@@ -2197,6 +2681,9 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.54.3
+     - level-1
+     - cortana
 
   - name: "Ensure 'Allow indexing of encrypted files' is set to 'Disabled'"
     win_regedit:
@@ -2206,6 +2693,8 @@
       type: dword
     tags:
      - CCE-38277-0
+     - 18.9.54.4
+     - level-1
 
   - name: "Ensure 'Allow search and Cortana to use location' is set to 'Disabled'"
     win_regedit:
@@ -2215,6 +2704,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.54.5
+     - level-1
 
   - name: "Ensure 'Turn off Automatic Download and Install of updates' is set to 'Disabled'"
     win_regedit:
@@ -2224,6 +2715,8 @@
       type: dword
     tags:
      - CCE-38360-4
+     - 18.9.61.2
+     - level-1
      - windows_update
 
   - name: "Ensure 'Turn off the offer to update to the latest version of Windows' is set to 'Enabled'"
@@ -2234,8 +2727,10 @@
       type: dword
     tags:
      - CCE-38362-0
+     - 18.9.61.3
+     - level-1
 
-  - name: "Ensure 'Allow Windows Ink Workspace' is set to 'Enabled - On, but disallow access above lock' OR 'Disabled' but not 'Enabled - On'"
+  - name: "Ensure 'Allow Windows Ink Workspace' is set to 'Enabled: On, but disallow access above lock' OR 'Disabled' but not 'Enabled: On'"
     win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\WindowsInkWorkspace
       name: "AllowWindowsInkWorkspace"
@@ -2243,6 +2738,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.73.2
+     - level-1
 
   - name: "Ensure 'Allow user control over installs' is set to 'Disabled'"
     win_regedit:
@@ -2252,6 +2749,8 @@
       type: dword
     tags:
      - CCE-36400-0
+     - 18.9.74.1
+     - level-1
 
   - name: "Ensure 'Always install with elevated privileges' is set to 'Disabled'"
     win_regedit:
@@ -2261,6 +2760,8 @@
       type: dword
     tags:
      - CCE-36919-9
+     - 18.9.74.2
+     - level-1
 
   - name: "Ensure 'Sign-in last interactive user automatically after a system-initiated restart' is set to 'Disabled'"
     win_regedit:
@@ -2270,6 +2771,8 @@
       type: dword
     tags:
      - CCE-36977-7
+     - 18.9.75.1
+     - level-1
 
   - name: "Ensure 'Turn on PowerShell Module Logging' is set to 'Enabled, Modules=*'"
     win_regedit:
@@ -2281,7 +2784,7 @@
      - CCE-Null
      - powershell
 
-  - name: "Ensure 'Turn on PowerShell Script Block Logging' is set to 'Disabled' [GSA-Enabled]"
+  - name: "Ensure 'Turn on PowerShell Script Block Logging' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Powershell\Scriptblocklogging
       name: "EnableScriptBlockLogging"
@@ -2289,9 +2792,11 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.84.1
+     - level-1
      - powershell
 
-  - name: "Ensure 'Turn on PowerShell Transcription' is set to 'Disabled' [GSA-Enabled]"
+  - name: "Ensure 'Turn on PowerShell Transcription' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Powershell\Transcription
       name: "EnableTranscripting"
@@ -2299,6 +2804,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.84.2
+     - level-1
      - powershell
 
   - name: "Ensure 'Allow Basic authentication' is set to 'Disabled'"
@@ -2309,6 +2816,8 @@
       type: dword
     tags:
      - CCE-36310-1
+     - 18.9.86.1.1
+     - level-1
      - winrm
 
   - name: "Ensure 'Allow unencrypted traffic' is set to 'Disabled'"
@@ -2319,6 +2828,8 @@
       type: dword
     tags:
      - CCE-37726-7
+     - 18.9.86.1.2
+     - level-1
      - winrm
 
   - name: "Ensure 'Disallow Digest authentication' is set to 'Enabled'"
@@ -2329,6 +2840,8 @@
       type: dword
     tags:
      - CCE-38318-2
+     - 18.9.86.1.3
+     - level-1
      - winrm
 
   - name: "Ensure 'Allow Basic authentication' is set to 'Disabled'"
@@ -2339,6 +2852,8 @@
       type: dword
     tags:
      - CCE-36254-1
+     - 18.9.86.2.1
+     - level-1
      - winrm
 
   - name: "Ensure 'Allow remote server management through WinRM' is set to 'Disabled'"
@@ -2349,6 +2864,8 @@
       type: dword
     tags:
      - CCE-37927-1
+     - 18.9.86.2.2
+     - level-2
      - winrm
 
   - name: "Ensure 'Allow unencrypted traffic' is set to 'Disabled'"
@@ -2359,6 +2876,8 @@
       type: dword
     tags:
      - CCE-38223-4
+     - 18.9.86.2.3
+     - level-1
 
   - name: "Ensure 'Disallow WinRM from storing RunAs credentials' is set to 'Enabled'"
     win_regedit:
@@ -2368,6 +2887,8 @@
       type: dword
     tags:
      - CCE-36000-8
+     - 18.9.86.2.4
+     - level-1
      - winrm
 
   - name: "Ensure 'Allow Remote Shell Access' is set to 'Disabled'"
@@ -2378,9 +2899,11 @@
       type: dword
     tags:
      - CCE-36499-2
+     - 18.9.87.1
+     - level-2
      - winrm
 
-  - name: "Ensure 'Select when Feature Updates are received' is 'Enabled - Current Branch for Business, 180 days' - DeferFeatureUpdates"
+  - name: "Ensure 'Select when Feature Updates are received' is set to 'Enabled: Current Branch for Business, 180 days'"
     win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
       name: "DeferFeatureUpdates"
@@ -2388,9 +2911,11 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.90.1.1
+     - level-1
      - windows_update
 
-  - name: "Ensure 'Select when Feature Updates are received' is 'Enabled - Current Branch for Business, 180 days' - DeferFeatureUpdatesPeriodInDays"
+  - name: "Ensure 'Select when Feature Updates are received' is set to 'Enabled: Current Branch for Business, 180 days'"
     win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
       name: "DeferFeatureUpdatesPeriodInDays"
@@ -2398,6 +2923,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.90.1.1
+     - level-1
      - windows_update
 
   - name: "Ensure 'Select when Feature Updates are received' is 'Enabled - Current Branch for Business, 180 days' - BranchReadinessLevel"
@@ -2408,9 +2935,11 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.90.1.1
+     - level-1
      - windows_update
 
-  - name: "Ensure 'Select when Quality Updates are received' is set to 'Enabled - 0 days' - DeferQualityUpdates"
+  - name: "Ensure 'Select when Quality Updates are received' is set to 'Enabled: 0 days' - DeferQualityUpdates"
     win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
       name: "DeferQualityUpdates"
@@ -2418,8 +2947,10 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.90.1.2
+     - level-1
 
-  - name: "Ensure 'Select when Quality Updates are received' is set to 'Enabled - 0 days' - DeferQualityUpdatesPeriodInDays"
+  - name: "Ensure 'Select when Quality Updates are received' is set to 'Enabled: 0 days' - DeferQualityUpdatesPeriodInDays"
     win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
       name: "DeferQualityUpdatesPeriodInDays"
@@ -2427,6 +2958,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.90.1.2
+     - level-1
      - windows_update
 
   - name: "Ensure 'Configure Automatic Updates' is set to 'Enabled'"
@@ -2437,8 +2970,10 @@
       type: dword
     tags:
      - CCE-36172-5
+     - 18.9.90.2
+     - level-1
 
-  - name: "Ensure 'Configure Automatic Updates - Scheduled install day' is set to '0 - Every day'"
+  - name: "Ensure 'Configure Automatic Updates: Scheduled install day' is set to '0 - Every day'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Windowsupdate\Au
       name: "ScheduledInstallDay"
@@ -2446,6 +2981,8 @@
       type: dword
     tags:
      - CCE-36172-5
+     - 18.9.90.3
+     - level-1
      - windows_update
 
   - name: "Ensure 'No auto-restart with logged on users for scheduled automatic updates installations' is set to 'Disabled'"
@@ -2456,9 +2993,11 @@
       type: dword
     tags:
      - CCE-37027-0
+     - 18.9.90.4
+     - level-1
      - windows_update
 
-  - name: "Ensure 'MSS - (KeepAliveTime) How often keep-alive packets are sent in milliseconds' is set to 'Enabled - 300,000 or 5 minutes'"
+  - name: "Ensure 'MSS: (KeepAliveTime) How often keep-alive packets are sent in milliseconds' is set to 'Enabled: 300,000 or 5 minutes (recommended)'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Tcpip\Parameters
       name: "KeepAliveTime"
@@ -2466,8 +3005,10 @@
       type: dword
     tags:
      - CCE-36868-8
+     - 18.3.5
+     - level-2
 
-  - name: "Ensure 'MSS - (PerformRouterDiscovery) Allow IRDP to detect and configure Default Gateway addresses (could lead to DoS)' is set to 'Disabled'"
+  - name: "Ensure 'MSS: (PerformRouterDiscovery) Allow IRDP to detect and configure Default Gateway addresses (could lead to DoS)' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Tcpip\Parameters
       name: "PerformRouterDiscovery"
@@ -2475,8 +3016,10 @@
       type: dword
     tags:
      - CCE-38065-9
+     - 18.3.7
+     - level-2
 
-  - name: "Ensure 'MSS - (TcpMaxDataRetransmissions IPv6) How many times unacknowledged data is retransmitted' is set to 'Enabled - 3'"
+  - name: "Ensure 'MSS: (TcpMaxDataRetransmissions IPv6) How many times unacknowledged data is retransmitted' is set to 'Enabled: 3'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Tcpip6\Parameters
       name: "tcpmaxdataretransmissions"
@@ -2484,8 +3027,10 @@
       type: dword
     tags:
      - CCE-37846-3
+     - 18.3.10
+     - level-2
 
-  - name: "Ensure 'MSS - (TcpMaxDataRetransmissions) How many times unacknowledged data is retransmitted' is set to 'Enabled - 3'"
+  - name: "Ensure 'MSS: (TcpMaxDataRetransmissions) How many times unacknowledged data is retransmitted' is set to 'Enabled: 3'"
     win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Tcpip\Parameters
       name: "tcpmaxdataretransmissions"
@@ -2493,6 +3038,8 @@
       type: dword
     tags:
      - CCE-36051-1
+     - 18.3.11
+     - level-2
 
   - name: "Ensure 'Enable Font Providers' is set to 'Disabled'"
     win_regedit:
@@ -2502,6 +3049,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.4.5.1
+     - level-2
 
   - name: "Ensure 'Turn on Mapper I/O (LLTDIO) driver' is set to 'Disabled' - AllowLLTDIOOndomain"
     win_regedit:
@@ -2511,6 +3060,8 @@
       type: dword
     tags:
      - CCE-38170-7
+     - 18.4.9.1
+     - level-2
 
   - name: "Ensure 'Turn on Mapper I/O (LLTDIO) driver' is set to 'Disabled' - AllowLLTDIOOnPublicNet"
     win_regedit:
@@ -2520,6 +3071,8 @@
       type: dword
     tags:
      - CCE-38170-7
+     - 18.4.9.1
+     - level-2
 
   - name: "Ensure 'Turn on Mapper I/O (LLTDIO) driver' is set to 'Disabled' - EnableLLTDIO"
     win_regedit:
@@ -2529,6 +3082,8 @@
       type: dword
     tags:
      - CCE-38170-7
+     - 18.4.9.1
+     - level-2
 
   - name: "Ensure 'Turn on Mapper I/O (LLTDIO) driver' is set to 'Disabled' - ProhibitLLTDIOOnPrivateNet"
     win_regedit:
@@ -2538,6 +3093,8 @@
       type: dword
     tags:
      - CCE-38170-7
+     - 18.4.9.1
+     - level-2
 
   - name: "Ensure 'Turn on Responder (RSPNDR) driver' is set to 'Disabled' - AllowRspndrOnDomain"
     win_regedit:
@@ -2547,6 +3104,7 @@
       type: dword
     tags:
      - CCE-37959-4
+     - level-2
 
   - name: "Ensure 'Turn on Responder (RSPNDR) driver' is set to 'Disabled' - AllowRspndrOnPublicNet"
     win_regedit:
@@ -2556,6 +3114,8 @@
       type: dword
     tags:
      - CCE-37959-4
+     - 18.4.9.1
+     - level-2
 
   - name: "Ensure 'Turn on Responder (RSPNDR) driver' is set to 'Disabled' - EnableRspndr"
     win_regedit:
@@ -2565,6 +3125,8 @@
       type: dword
     tags:
      - CCE-37959-4
+     - 18.4.9.1
+     - level-2
 
   - name: "Ensure 'Turn on Responder (RSPNDR) driver' is set to 'Disabled' - ProhibitRspndrOnPrivateNet"
     win_regedit:
@@ -2574,6 +3136,8 @@
       type: dword
     tags:
      - CCE-37959-4
+     - 18.4.9.1
+     - level-2
 
   - name: "Ensure 'Turn off Microsoft Peer-to-Peer Networking Services' is set to 'Enabled'"
     win_regedit:
@@ -2583,6 +3147,8 @@
       type: dword
     tags:
      - CCE-37699-6
+     - 18.4.10.2
+     - level-2
 
   - name: "Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - EnableRegistrars"
     win_regedit:
@@ -2592,6 +3158,8 @@
       type: dword
     tags:
      - CCE-37481-9
+     - 18.4.20.1
+     - level-2
 
   - name: "Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableUPnPRegistrar"
     win_regedit:
@@ -2601,6 +3169,8 @@
       type: dword
     tags:
      - CCE-37481-9
+     - 18.4.20.1
+     - level-2
 
   - name: "Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableInBand802DOT11Registrar"
     win_regedit:
@@ -2610,6 +3180,7 @@
       type: dword
     tags:
      - CCE-37481-9
+     - level-2
 
   - name: "Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableFlashConfigRegistrar"
     win_regedit:
@@ -2619,6 +3190,8 @@
       type: dword
     tags:
      - CCE-37481-9
+     - 18.4.20.1
+     - level-2
 
   - name: "Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' - DisableWPDRegistrar"
     win_regedit:
@@ -2628,6 +3201,8 @@
       type: dword
     tags:
      - CCE-37481-9
+     - 18.4.20.1
+     - level-2
 
   - name: "Ensure 'Prohibit access of the Windows Connect Now wizards' is set to 'Enabled'"
     win_regedit:
@@ -2637,8 +3212,10 @@
       type: dword
     tags:
      - CCE-36109-7
+     - 18.4.20.2
+     - level-2
 
-  - name: "Ensure 'Prohibit connection to non-domain networks when connected to domain authenticated network' is set to 'Enabled'"
+  - name: "Ensure 'Prohibit connection to non-domain networks when connected to domain authenticated network' is set to 'Enabled' (MS only)"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Wcmsvc\Grouppolicy
       name: "fBlockNonDomain"
@@ -2646,6 +3223,8 @@
       type: dword
     tags:
      - CCE-37627-7
+     - 18.4.21.2
+     - level-2
 
   - name: "Ensure 'Turn off access to the Store' is set to 'Enabled'"
     win_regedit:
@@ -2655,6 +3234,8 @@
       type: dword
     tags:
      - CCE-37904-0
+     - 18.8.20.1.1
+     - level-2
 
   - name: "Ensure 'Turn off downloading of print drivers over HTTP' is set to 'Enabled'"
     win_regedit:
@@ -2664,6 +3245,8 @@
       type: dword
     tags:
      - CCE-36625-2
+     - 18.8.20.1.2
+     - level-2
      - drivers
 
   - name: "Ensure 'Turn off handwriting personalization data sharing' is set to 'Enabled'"
@@ -2674,6 +3257,8 @@
       type: dword
     tags:
      - CCE-37911-5
+     - 18.8.20.1.3
+     - level-2
 
   - name: "Ensure 'Turn off handwriting recognition error reporting' is set to 'Enabled'"
     win_regedit:
@@ -2683,6 +3268,8 @@
       type: dword
     tags:
      - CCE-36203-8
+     - 18.8.20.1.4
+     - level-2
 
   - name: "Ensure 'Turn off Internet Connection Wizard if URL connection is referring to Microsoft.com' is set to 'Enabled'"
     win_regedit:
@@ -2692,6 +3279,8 @@
       type: dword
     tags:
      - CCE-37163-3
+     - 18.8.20.1.5
+     - level-2
 
   - name: "Ensure 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled'"
     win_regedit:
@@ -2701,6 +3290,8 @@
       type: dword
     tags:
      - CCE-36096-6
+     - 18.8.20.1.6
+     - level-2
 
   - name: "Ensure 'Turn off printing over HTTP' is set to 'Enabled'"
     win_regedit:
@@ -2710,6 +3301,8 @@
       type: dword
     tags:
      - CCE-36920-7
+     - 18.8.20.1.7
+     - level-2
 
   - name: "Ensure 'Turn off Registration if URL connection is referring to Microsoft.com' is set to 'Enabled'"
     win_regedit:
@@ -2719,6 +3312,8 @@
       type: dword
     tags:
      - CCE-36352-3
+     - 18.8.20.1.8
+     - level-2
 
   - name: "Ensure 'Turn off Search Companion content file updates' is set to 'Enabled'"
     win_regedit:
@@ -2728,6 +3323,8 @@
       type: dword
     tags:
      - CCE-36884-5
+     - 18.8.20.1.9
+     - level-2
 
   - name: "Ensure 'Turn off the 'Order Prints' picture task' is set to 'Enabled'"
     win_regedit:
@@ -2737,6 +3334,8 @@
       type: dword
     tags:
      - CCE-38275-4
+     - 18.8.20.1.10
+     - level-2
 
   - name: "Ensure 'Turn off the 'Publish to Web' task for files and folders' is set to 'Enabled'"
     win_regedit:
@@ -2746,6 +3345,8 @@
       type: dword
     tags:
      - CCE-37090-8
+     - 18.8.20.1.11
+     - level-2
 
   - name: "Ensure 'Turn off the Windows Messenger Customer Experience Improvement Program' is set to 'Enabled'"
     win_regedit:
@@ -2755,6 +3356,8 @@
       type: dword
     tags:
      - CCE-36628-6
+     - 18.8.20.1.12
+     - level-2
 
   - name: "Ensure 'Turn off Windows Customer Experience Improvement Program' is set to 'Enabled'"
     win_regedit:
@@ -2764,6 +3367,8 @@
       type: dword
     tags:
      - CCE-36174-1
+     - 18.8.20.1.13
+     - level-2
 
   - name: "Ensure 'Turn off Windows Error Reporting' is set to 'Enabled'"
     win_regedit:
@@ -2773,8 +3378,10 @@
       type: dword
     tags:
      - CCE-35964-6
+     - 18.8.20.1.14
+     - level-2
 
-  - name: "Ensure 'Support device authentication using certificate' is set to 'Enabled - Automatic' - Enabled"
+  - name: "Ensure 'Support device authentication using certificate' is set to 'Enabled: Automatic' - Enabled"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\kerberos\parameters
       name: "DevicePKInitEnabled"
@@ -2782,8 +3389,10 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.8.23.1
+     - level-2
 
-  - name: "Ensure 'Support device authentication using certificate' is set to 'Enabled - Automatic' - Behavior"
+  - name: "Ensure 'Support device authentication using certificate' is set to 'Enabled: Automatic' - Behavior"
     win_regedit:
       path: HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\kerberos\parameters
       name: "DevicePKInitBehavior"
@@ -2791,6 +3400,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.8.23.1
+     - level-2
 
   - name: "Ensure 'Disallow copying of user input methods to the system account for sign-in' is set to 'Enabled'"
     win_regedit:
@@ -2800,6 +3411,8 @@
       type: dword
     tags:
      - CCE-36343-2
+     - 18.8.24.1
+     - level-2
 
   - name: "Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'"
     win_regedit:
@@ -2809,6 +3422,8 @@
       type: dword
     tags:
      - CCE-36881-1
+     - 18.8.29.5.3
+     - level-2
      - passwords
 
   - name: "Ensure 'Require a password when a computer wakes (plugged in)' is set to 'Enabled'"
@@ -2819,9 +3434,11 @@
       type: dword
     tags:
      - CCE-37066-8
+     - 18.8.29.5.4
+     - level-2
      - passwords
 
-  - name: "Ensure 'Restrict Unauthenticated RPC clients' is set to 'Enabled - Authenticated'"
+  - name: "Ensure 'Restrict Unauthenticated RPC clients' is set to 'Enabled: Authenticated' (MS only)"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Rpc
       name: "RestrictRemoteClients"
@@ -2829,8 +3446,10 @@
       type: dword
     tags:
      - CCE-36559-3
+     - 18.8.32.2
+     - level-2
 
-  - name: "Ensure 'Microsoft Support Diagnostic Tool - Turn on MSDT interactive communication with support provider' is set to 'Disabled'"
+  - name: "Ensure 'Microsoft Support Diagnostic Tool: Turn on MSDT interactive communication with support provider' is set to 'Disabled'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Scripteddiagnosticsprovider\Policy
       name: "DisableQueryRemoteServer"
@@ -2838,6 +3457,8 @@
       type: dword
     tags:
      - CCE-38161-6
+     - 18.8.39.5.1
+     - level-2
 
   - name: "Ensure 'Enable/Disable PerfTrack' is set to 'Disabled'"
     win_regedit:
@@ -2847,6 +3468,8 @@
       type: dword
     tags:
      - CCE-36648-4
+     - 18.8.39.11.1
+     - level-2
 
   - name: "Ensure 'Turn off the advertising ID' is set to 'Enabled'"
     win_regedit:
@@ -2856,6 +3479,8 @@
       type: dword
     tags:
      - CCE-36931-4
+     - 18.8.41.1
+     - level-2
 
   - name: "Ensure 'Enable Windows NTP Client' is set to 'Enabled'"
     win_regedit:
@@ -2865,6 +3490,8 @@
       type: dword
     tags:
      - CCE-37843-0
+     - 18.8.44.1.1
+     - level-2
 
   - name: "Ensure 'Enable Windows NTP Server' is set to 'Disabled'"
     win_regedit:
@@ -2874,6 +3501,8 @@
       type: dword
     tags:
      - CCE-37319-1
+     - 18.8.44.1.2
+     - level-2
 
   - name: "Ensure 'Allow a Windows app to share application data between users' is set to 'Disabled'"
     win_regedit:
@@ -2883,8 +3512,10 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.4.1
+     - level-2
 
-  - name: "Ensure 'Let Windows apps *' is set to 'Enabled - Force Deny' - LetAppsAccessAccountInfo"
+  - name: "Ensure 'Let Windows apps *' is set to 'Enabled: Force Deny' - LetAppsAccessAccountInfo"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\AppPrivacy
       name: "LetAppsAccessAccountInfo"
@@ -2892,6 +3523,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.5.1
+     - level-2
 
   - name: "Ensure 'Let Windows apps *' is set to 'Enabled - Force Deny' - LetAppsAccessCalendar"
     win_regedit:
@@ -2901,6 +3534,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.5.1
+     - level-2
 
   - name: "Ensure 'Let Windows apps *' is set to 'Enabled - Force Deny' - LetAppsAccessCallHistory"
     win_regedit:
@@ -2910,6 +3545,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.5.1
+     - level-2
 
   - name: "Ensure 'Let Windows apps *' is set to 'Enabled - Force Deny' - LetAppsAccessCamera"
     win_regedit:
@@ -2919,6 +3556,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.5.1
+     - level-2
 
   - name: "Ensure 'Let Windows apps *' is set to 'Enabled - Force Deny' - LetAppsAccessContacts"
     win_regedit:
@@ -2928,6 +3567,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.5.1
+     - level-2
 
   - name: "Ensure 'Let Windows apps *' is set to 'Enabled - Force Deny' - LetAppsAccessEmail"
     win_regedit:
@@ -2937,6 +3578,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.5.1
+     - level-2
 
   - name: "Ensure 'Let Windows apps *' is set to 'Enabled - Force Deny' - LetAppsAccessLocation"
     win_regedit:
@@ -2946,6 +3589,7 @@
       type: dword
     tags:
      - CCE-Null
+     - level-2
 
   - name: "Ensure 'Let Windows apps *' is set to 'Enabled - Force Deny' - LetAppsAccessMessaging"
     win_regedit:
@@ -2955,6 +3599,7 @@
       type: dword
     tags:
      - CCE-Null
+     - level-2
 
   - name: "Ensure 'Let Windows apps *' is set to 'Enabled - Force Deny' - LetAppsAccessMicrophone"
     win_regedit:
@@ -2964,6 +3609,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.5.1
+     - level-2
 
   - name: "Ensure 'Let Windows apps *' is set to 'Enabled - Force Deny' - LetAppsAccessMotion"
     win_regedit:
@@ -2973,6 +3620,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.5.1
+     - level-2
 
   - name: "Ensure 'Let Windows apps *' is set to 'Enabled - Force Deny' - LetAppsAccessRadios"
     win_regedit:
@@ -2982,6 +3631,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.5.1
+     - level-2
 
   - name: "Ensure 'Let Windows apps *' is set to 'Enabled - Force Deny' - LetAppsAccessTrustedDevices"
     win_regedit:
@@ -2991,6 +3642,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.5.1
+     - level-2
 
   - name: "Ensure 'Let Windows apps *' is set to 'Enabled - Force Deny' - LetAppsSyncWithDevices"
     win_regedit:
@@ -3000,6 +3653,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.5.1
+     - level-2
 
   - name: "Ensure 'Let Windows apps *' is set to 'Enabled - Force Deny' - LetAppsAccessPhone"
     win_regedit:
@@ -3009,6 +3664,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.5.1
+     - level-2
 
   - name: "Ensure 'Let Windows apps *' is set to 'Enabled - Force Deny' - LetAppsAccessNotifications"
     win_regedit:
@@ -3018,6 +3675,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.5.1
+     - level-2
 
   - name: "Ensure 'Block launching Windows Store apps with Windows Runtime API access from hosted content.' is set to 'Enabled'"
     win_regedit:
@@ -3027,6 +3686,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.6.2
+     - level-2
 
   - name: "Ensure 'Turn off location' is set to 'Enabled'"
     win_regedit:
@@ -3036,6 +3697,8 @@
       type: dword
     tags:
      - CCE-36886-0
+     - 18.9.37.2
+     - level-2
 
   - name: "Ensure 'Allow Extensions' is set to 'Disabled'"
     win_regedit:
@@ -3045,6 +3708,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.41.1
+     - level-2
 
   - name: "Ensure 'Configure Pop-up Blocker' is set to 'Enabled'"
     win_regedit:
@@ -3054,8 +3719,10 @@
       type: string
     tags:
      - CCE-Null
+     - 18.9.41.5
+     - level-2
 
-  - name: "Ensure 'Prevent access to the about-flags page in Microsoft Edge' is set to 'Enabled'"
+  - name: "Ensure 'Prevent access to the about:flags page in Microsoft Edge' is set to 'Enabled' "
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\MicrosoftEdge\Main
       name: "PreventAccessToAboutFlagsInMicrosoftEdge"
@@ -3063,6 +3730,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.41.8
+     - level-2
 
   - name: "Ensure 'Prevent bypassing SmartScreen prompts for files' is set to 'Enabled'"
     win_regedit:
@@ -3072,6 +3741,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.41.9
+     - level-2
 
   - name: "Ensure 'Prevent bypassing SmartScreen prompts for sites' is set to 'Enabled'"
     win_regedit:
@@ -3081,6 +3752,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.41.10
+     - level-2
 
   - name: "Ensure 'Prevent using Localhost IP address for WebRTC' is set to 'Enabled'"
     win_regedit:
@@ -3090,6 +3763,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.41.11
+     - level-2
 
   - name: "Ensure 'Restrict Remote Desktop Services users to a single Remote Desktop Services session' is set to 'Enabled'"
     win_regedit:
@@ -3099,6 +3774,8 @@
       type: dword
     tags:
      - CCE-37708-5
+     - 18.9.52.3.2.1
+     - level-2
      - remote_desktop
 
   - name: "Ensure 'Do not allow COM port redirection' is set to 'Enabled'"
@@ -3109,6 +3786,8 @@
       type: dword
     tags:
      - CCE-37696-2
+     - 18.9.52.3.3.1
+     - level-2
 
   - name: "Ensure 'Do not allow LPT port redirection' is set to 'Enabled'"
     win_regedit:
@@ -3118,6 +3797,8 @@
       type: dword
     tags:
      - CCE-37778-8
+     - 18.9.52.3.3.3
+     - level-2
 
   - name: "Ensure 'Do not allow supported Plug and Play device redirection' is set to 'Enabled'"
     win_regedit:
@@ -3127,8 +3808,10 @@
       type: dword
     tags:
      - CCE-37477-7
+     - 18.9.52.3.3.4
+     - level-2
 
-  - name: "Ensure 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled - 15 minutes or less' [GSA-1 hour or less]"
+  - name: "Ensure 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services
       name: "MaxIdleTime"
@@ -3136,9 +3819,11 @@
       type: dword
     tags:
      - CCE-37562-6
+     - 18.9.52.3.10.1
+     - level-2
      - remote_desktop
 
-  - name: "Ensure 'Set time limit for disconnected sessions' is set to 'Enabled - 1 minute' [GSA-8 hours or less]"
+  - name: "Ensure 'Set time limit for disconnected sessions' is set to 'Enabled: 1 minute'"
     win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services
       name: "MaxDisconnectionTime"
@@ -3146,6 +3831,8 @@
       type: dword
     tags:
      - CCE-37949-5
+     - 18.9.52.3.10.2
+     - level-2
 
   - name: "Ensure 'Turn off KMS Client Online AVS Validation' is set to 'Enabled'"
     win_regedit:
@@ -3155,6 +3842,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.59.1
+     - level-2
      - desktop
 
   - name: "Ensure 'Disable all apps from Windows Store' is set to 'Enabled'"
@@ -3165,6 +3854,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.61.1
+     - level-2
      - desktop
 
   - name: "Ensure 'Turn off the Store application' is set to 'Enabled'"
@@ -3175,6 +3866,8 @@
       type: dword
     tags:
      - CCE-38363-8
+     - 18.9.61.4
+     - level-2
      - desktop
 
   - name: "Ensure 'Configure Watson events' is set to 'Disabled'"
@@ -3185,6 +3878,8 @@
       type: dword
     tags:
      - CCE-36950-4
+     - 18.9.69.8.1
+     - level-2
      - desktop
 
   - name: "Ensure 'Allow suggested apps in Windows Ink Workspace' is set to 'Disabled'"
@@ -3195,6 +3890,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 18.9.73.1
+     - level-2
      - desktop
 
   - name: "Ensure 'Prevent Internet Explorer security prompt for Windows Installer scripts' is set to 'Disabled'"
@@ -3205,6 +3902,8 @@
       type: dword
     tags:
      - CCE-37524-6
+     - 18.9.74.3
+     - level-2
      - desktop
 
   - name: "Ensure 'Enable screen saver' is set to 'Enabled'"
@@ -3215,6 +3914,8 @@
       type: string
     tags:
      - CCE-37970-1
+     - 19.1.3.1
+     - level-1
      - desktop
 
   - name: "Ensure 'Enable screen saver' is set to 'Enabled'"
@@ -3225,9 +3926,11 @@
       type: string
     tags:
      - CCE-37970-1
+     - 19.1.3.1
+     - level-1
      - desktop
 
-  - name: "Ensure 'Force specific screen saver - Screen saver executable name' is set to 'Enabled - scrnsave.scr'"
+  - name: "Ensure 'Force specific screen saver: Screen saver executable name' is set to 'Enabled: scrnsave.scr'"
     win_regedit:
       path: HKU:\.DEFAULT\Software\Policies\Microsoft\Windows\Control Panel\Desktop
       name: "SCRNSAVE.EXE"
@@ -3235,9 +3938,11 @@
       type: string
     tags:
      - CCE-37907-3
+     - 19.1.3.2
+     - level-1
      - desktop
 
-  - name: "Ensure 'Force specific screen saver - Screen saver executable name' is set to 'Enabled - scrnsave.scr'"
+  - name: "Ensure 'Force specific screen saver: Screen saver executable name' is set to 'Enabled: scrnsave.scr'"
     win_regedit:
       path: HKCU:\Software\Policies\Microsoft\Windows\Control Panel\Desktop
       name: "SCRNSAVE.EXE"
@@ -3245,6 +3950,8 @@
       type: string
     tags:
      - CCE-37907-3
+     - 19.1.3.2
+     - level-1
      - desktop
 
   - name: "Ensure 'Password protect the screen saver' is set to 'Enabled'"
@@ -3255,6 +3962,8 @@
       type: string
     tags:
      - CCE-37658-2
+     - 19.1.3.3
+     - level-1
      - desktop
      - passwords
 
@@ -3266,10 +3975,12 @@
       type: string
     tags:
      - CCE-37658-2
+     - 19.1.3.3
+     - level-1
      - desktop
      - passwords
 
-  - name: "Ensure 'Screen saver timeout' is set to 'Enabled - 900 seconds or fewer, but not 0'"
+  - name: "Ensure 'Screen saver timeout' is set to 'Enabled: 900 seconds or fewer, but not 0'"
     win_regedit:
       path: HKU:\.DEFAULT\Software\Policies\Microsoft\Windows\Control Panel\Desktop
       name: "ScreenSaveTimeOut"
@@ -3277,9 +3988,11 @@
       type: string
     tags:
      - CCE-37908-1
+     - 19.1.3.4
+     - level-1
      - desktop
 
-  - name: "Ensure 'Screen saver timeout' is set to 'Enabled - 900 seconds or fewer, but not 0'"
+  - name: "Ensure 'Screen saver timeout' is set to 'Enabled: 900 seconds or fewer, but not 0'"
     win_regedit:
       path: HKCU:\Software\Policies\Microsoft\Windows\Control Panel\Desktop
       name: "ScreenSaveTimeOut"
@@ -3287,6 +4000,8 @@
       type: string
     tags:
      - CCE-37908-1
+     - 19.1.3.4
+     - level-1
      - desktop
 
   - name: "Ensure 'Turn off toast notifications on the lock screen' is set to 'Enabled'"
@@ -3297,6 +4012,8 @@
       type: dword
     tags:
      - CCE-36332-5
+     - 19.5.1.1
+     - level-1
      - desktop
 
   - name: "Ensure 'Turn off toast notifications on the lock screen' is set to 'Enabled'"
@@ -3307,6 +4024,8 @@
       type: dword
     tags:
      - CCE-36332-5
+     - 19.5.1.1
+     - level-1
      - desktop
 
   - name: "Ensure 'Do not preserve zone information in file attachments' is set to 'Disabled'"
@@ -3317,6 +4036,8 @@
       type: dword
     tags:
      - CCE-37424-9
+     - 19.7.4.1
+     - level-1
      - desktop
 
   - name: "Ensure 'Do not preserve zone information in file attachments' is set to 'Disabled'"
@@ -3327,6 +4048,8 @@
       type: dword
     tags:
      - CCE-37424-9
+     - 19.7.4.1
+     - level-1
      - desktop
 
   - name: "Ensure 'Notify antivirus programs when opening attachments' is set to 'Enabled'"
@@ -3337,6 +4060,8 @@
       type: dword
     tags:
      - CCE-36622-9
+     - 19.7.4.2
+     - level-1
      - desktop
 
   - name: "Ensure 'Notify antivirus programs when opening attachments' is set to 'Enabled'"
@@ -3347,6 +4072,8 @@
       type: dword
     tags:
      - CCE-36622-9
+     - 19.7.4.2
+     - level-1
      - desktop
 
   - name: "Ensure 'Do not suggest third-party content in Windows spotlight' is set to 'Enabled'"
@@ -3357,6 +4084,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 19.7.7.2
+     - level-1
      - desktop
 
   - name: "Ensure 'Do not suggest third-party content in Windows spotlight' is set to 'Enabled'"
@@ -3367,6 +4096,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 19.7.7.2
+     - level-1
      - desktop
 
   - name: "Ensure 'Prevent users from sharing files within their profile.' is set to 'Enabled'"
@@ -3377,6 +4108,8 @@
       type: dword
     tags:
      - CCE-38070-9
+     - 19.7.26.1
+     - level-1
      - desktop
 
   - name: "Ensure 'Prevent users from sharing files within their profile.' is set to 'Enabled'"
@@ -3387,6 +4120,8 @@
       type: dword
     tags:
      - CCE-38070-9
+     - 19.7.26.1
+     - level-1
      - desktop
 
   - name: "Ensure 'Always install with elevated privileges' is set to 'Disabled'"
@@ -3397,6 +4132,8 @@
       type: dword
     tags:
      - CCE-37490-0
+     - 19.7.39.1
+     - level-1
      - desktop
 
   - name: "Ensure 'Always install with elevated privileges' is set to 'Disabled'"
@@ -3407,6 +4144,8 @@
       type: dword
     tags:
      - CCE-37490-0
+     - 19.7.39.1
+     - level-1
      - desktop
 
   - name: "Ensure 'Turn off Help Experience Improvement Program' is set to 'Enabled'"
@@ -3417,6 +4156,8 @@
       type: dword
     tags:
      - CCE-37542-8
+     - 19.6.5.1.1
+     - level-2
      - desktop
 
   - name: "Ensure 'Turn off Help Experience Improvement Program' is set to 'Enabled'"
@@ -3427,6 +4168,8 @@
       type: dword
     tags:
      - CCE-37542-8
+     - 19.6.5.1.1
+     - level-2
      - desktop
 
   - name: "Ensure 'Configure Windows spotlight on Lock Screen' is set to Disabled'"
@@ -3437,6 +4180,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 19.7.7.1
+     - level-2
      - desktop
 
   - name: "Ensure 'Configure Windows spotlight on Lock Screen' is set to Disabled'"
@@ -3447,6 +4192,8 @@
       type: dword
     tags:
      - CCE-Null
+     - 19.7.7.1
+     - level-2
      - desktop
 
   - name: "Ensure 'Prevent Codec Download' is set to 'Enabled'"
@@ -3457,6 +4204,8 @@
       type: dword
     tags:
      - CCE-37445-4
+     - 19.7.43.2.1
+     - level-2
      - desktop
 
   - name: "Ensure 'Prevent Codec Download' is set to 'Enabled'"
@@ -3467,17 +4216,21 @@
       type: dword
     tags:
      - CCE-37445-4
+     - 19.7.43.2.1
+     - level-2
      - desktop
 
-  - name: "Configure 'Accounts - Rename administrator account'"
+  - name: "Configure 'Accounts: Rename administrator account'"
     win_security_policy:
       section: System Access
       key: NewAdministratorName
       value: admaccount
     tags:
      - CCE-38233-3
+     - 2.3.1.5
+     - level-1
 
-  - name: "Ensure 'Accounts -  Administrator account status' is set to 'Disabled'"
+  - name: "Ensure 'Accounts:  Administrator account status' is set to 'Disabled'"
     win_security_policy:
       section: System Access
       key: EnableAdminAccount
