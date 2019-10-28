@@ -60,7 +60,7 @@ If you want to use AWS to test the playbook, you can use the provided terraform 
 
 If you are in the `terraform` directory, do `cd ..` and run the playbook:
 
-```ansible-playbook -i inventory.ini ansible-playbook -i inventory.ini playbooks/windows_server_2016_gsa.yml```
+```ansible-playbook -i inventory.ini playbooks/windows_server_2016_gsa.yml```
 
 If you get an error looking like this:
 
